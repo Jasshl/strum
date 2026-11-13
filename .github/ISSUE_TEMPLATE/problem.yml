@@ -1,0 +1,26 @@
+name: Report a problem
+description: Something in Strum doesn't work the way you expected.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for trying the beta. If the pointer or keys are stuck, press ⌃⌥⌘⎋ first.
+        Issues are public, so read the diagnostics before you post them.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you did, what Strum did, and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Diagnostics
+      description: In Strum's menu, choose Copy diagnostics and paste the result here. It leaves out device names, serial numbers, scripts, URLs, app names and home folder paths.
+      render: text
+  - type: input
+    id: trackpad
+    attributes:
+      label: Trackpad
+      placeholder: Built-in, Magic Trackpad 2, Magic Trackpad (USB-C)…

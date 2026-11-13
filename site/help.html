@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Help · Strum</title>
+  <meta name="description" content="How to set up Strum and use its trackpad gestures, plus recovery, known conflicts and how to uninstall.">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#141212" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="canonical" href="https://jasshl.github.io/strum/help.html">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="img/icon-256.webp" alt="" width="34" height="34">Strum</a>
+    <nav class="nav" aria-label="Main">
+      <a href="./#features">Features</a>
+      <a href="./#install">Install</a>
+      <a href="help.html" aria-current="page">Help</a>
+      <a class="button small" href="https://github.com/Jasshl/strum/releases/latest/download/Strum.dmg">Download</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="page wrap narrow">
+  <h1>Help</h1>
+  <ul class="toc" aria-label="On this page">
+    <li><a href="#getting-started">Getting started</a></li>
+    <li><a href="#gestures">What you can do</a></li>
+    <li><a href="#btt">Coming from BetterTouchTool</a></li>
+    <li><a href="#trouble">If something goes wrong</a></li>
+    <li><a href="#conflicts">Known conflicts</a></li>
+    <li><a href="#uninstall">Uninstall</a></li>
+  </ul>
+
+  <h2 id="getting-started">Getting started</h2>
+  <ol>
+    <li>Open the disk image and drag Strum to Applications, then open it from there. It lives in the menu bar, as a hand icon.
+      <ul>
+        <li>Beta builds aren't notarized by Apple yet, so the first time you open Strum, macOS says it can't check it. Go to System Settings › Privacy &amp; Security, scroll down to Security, click <strong>Open Anyway</strong> next to Strum and confirm. You only need to do this once per download. (Since macOS 15, right-click › Open no longer works for this.)</li>
+      </ul>
+    </li>
+    <li>Allow <strong>Accessibility</strong> when asked: in System Settings › Privacy &amp; Security › Accessibility, switch Strum on. Strum needs it to send keys and clicks, move windows, and stop macOS acting on gestures you've given to Strum. Reading the trackpad doesn't need any permission.</li>
+    <li>Pick some gesture packs in the welcome window, or make your own in Settings › Gestures › New gesture.</li>
+  </ol>
+
+  <h2 id="gestures">What you can do</h2>
+
+  <h3 id="edge-slides">Edge slides</h3>
+  <p>Put one finger right at the edge of the trackpad and slide along it to change the volume or brightness, switch tabs or skip tracks. If the action is a shortcut with modifier keys, such as ⌃⇥ or ⌘⇥, the modifiers stay held while you slide, so an app switcher picks when you lift.</p>
+
+  <h3 id="swipes">Swipes, taps, pinches, rotations and holds</h3>
+  <p>Swipes use 3 to 5 fingers, taps and double taps 1 to 5, pinches 2 to 5 and rotations 2 or 3. You can also rest your fingers for a hold. Any gesture you haven't set up in Strum still does what macOS does.</p>
+
+  <h3 id="force-press">Force press and multi-finger click</h3>
+  <p>For a force press, keep pressing past the normal click. You can use 1, 2 or 3 fingers. With one finger you also get the normal click on the way down, and you can limit it to a corner. Two fingers may right-click on the way down.</p>
+  <p>A multi-finger click is pressing the trackpad down with 2 to 5 fingers. Only your action happens, not the click, so a three-finger click can be a middle click. A two-finger click replaces your right-click.</p>
+
+  <h3 id="tiptap">TipTap</h3>
+  <p>Rest one finger, then quickly tap another to its left or right. You can give it any action in the editor.</p>
+
+  <h3 id="tabs-and-links">Tabs and links</h3>
+  <p>This pack lets you slide along the top edge to step through tabs and force click a link to open it in a new tab. If you'd rather, it can open links with a three-finger click instead. If macOS also shows Look up when you force click, turn off Force Click and haptic feedback in System Settings › Trackpad.</p>
+
+  <h3 id="windows">Window gestures</h3>
+  <p>Rest four fingers on a window until you feel a light tick. (You can use three or five instead in Settings › Windows.) Then do one of these:</p>
+  <ul>
+    <li><strong>Slide with all of them</strong> toward a layout. A preview shows where the window will go. Lift to apply it, or slide back to the middle to cancel. These are the default layouts, and you can change each one in Settings › Windows:
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th scope="col">Slide</th><th scope="col">Layout</th></tr></thead>
+          <tbody>
+            <tr><td>←</td><td>left third</td></tr>
+            <tr><td>→</td><td>right third</td></tr>
+            <tr><td>↖</td><td>left two thirds</td></tr>
+            <tr><td>↗</td><td>right two thirds</td></tr>
+            <tr><td>↑</td><td>middle third</td></tr>
+            <tr><td>↙</td><td>maximise</td></tr>
+            <tr><td>↓</td><td>almost maximise</td></tr>
+            <tr><td>↘</td><td>restore</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </li>
+    <li><strong>Lift to two fingers</strong> before sliding, to resize the window from the corner nearest the pointer.</li>
+    <li><strong>Lift to one finger</strong> to move the window. Flick it sideways for half the screen, diagonally for a quarter, up to maximise or down to restore.</li>
+  </ul>
+
+  <h3 id="smooth-pointer">Smooth Pointer (beta)</h3>
+  <p>On a Magic Trackpad 2, Strum can draw the cursor in step with your display so it moves evenly. "Match my Mac's pointer" sets its speed to feel like macOS's. It works with the Lightning model and should work with the USB-C one. If the pointer jitters, press ⌃⌥⌘⎋ and <a href="https://github.com/Jasshl/strum/issues/new/choose">let us know</a>. The original Magic Trackpad and built-in trackpads aren't supported.</p>
+
+  <h3 id="per-app">Per-app gestures and excluded apps</h3>
+  <p>A gesture can work everywhere or only in the apps you choose. In games and other apps you exclude, Strum switches off completely (Settings › Games &amp; excluded apps).</p>
+
+  <h3 id="agents">AI agents</h3>
+  <p>Strum comes with a <code>strum</code> tool and MCP server, so an AI assistant can set up gestures for you. Its changes are checked like yours and can be undone (Settings › Agents).</p>
+
+  <h2 id="btt">Coming from BetterTouchTool</h2>
+  <ol>
+    <li>In BTT, export your preset (Presets › Export).</li>
+    <li>Run this in Terminal:
+      <pre><code>/Applications/Strum.app/Contents/Helpers/strum import-btt ~/Downloads/YourPreset.bttpreset --dry-run</code></pre>
+      <p>This shows what would come across. Run it again without <code>--dry-run</code> to add the gestures. You can undo the import afterwards.</p>
+    </li>
+  </ol>
+  <p>Trackpad gestures that Strum can do come across with their actions. That covers swipes, taps, clicks, force clicks (corners too), pinches, long touches, edge swipes and TipTap, with shortcuts, media keys, volume and brightness, window layouts, clicks, apps, URLs, AppleScript and menu items. Anything else is listed as not imported.</p>
+
+  <h2 id="trouble">If something goes wrong</h2>
+  <ul>
+    <li><strong>Press <kbd>⌃⌥⌘⎋</kbd></strong> (Control, Option, Command, Escape) to put the pointer, held keys and any window grab back to macOS. It also turns Smooth Pointer off.</li>
+    <li><strong>The cursor won't move with the Magic Trackpad.</strong> Press ⌃⌥⌘⎋. If that doesn't help, run <code>/Applications/Strum.app/Contents/Helpers/strum pointer-restore</code> in Terminal, or switch the trackpad off and on again.</li>
+    <li><strong>Keys act as if ⌘ (or ⌥, ⌃, ⇧) is held</strong> after Strum quit in the middle of a gesture. Press and release that key once.</li>
+    <li><strong>A gesture does nothing.</strong> Open Live view and look at the gesture log. "Why?" tells you which gesture matched, or why none did.</li>
+    <li><strong>Strum seems to be off.</strong> The menu bar icon shows when it's paused or you're in an excluded app. Open the menu to resume it, or to include the app again.</li>
+    <li><strong>To report a problem</strong>, choose Copy diagnostics in the menu and paste the result into <a href="https://github.com/Jasshl/strum/issues/new/choose">a report on GitHub</a>. It doesn't include device names, serial numbers or home folder paths.</li>
+  </ul>
+
+  <h2 id="conflicts">Known conflicts</h2>
+  <ul>
+    <li>If another gesture tool such as BetterTouchTool, Swish or Multitouch uses the same gesture, both apps will act on it. Give each gesture to one app.</li>
+    <li>macOS's own 3- and 4-finger gestures keep working unless one of yours replaces them. The editor tells you when it does.</li>
+    <li>Window tools such as Rectangle and Raycast work fine alongside Strum.</li>
+  </ul>
+
+  <h2 id="uninstall">Uninstall</h2>
+  <ol>
+    <li>Quit Strum from its menu.</li>
+    <li>If you turned on "Open Strum at login", remove it from Login Items.</li>
+    <li>Delete Strum.app and <code>~/Library/Application Support/Strum</code>.</li>
+    <li>If you like, remove Strum from System Settings › Privacy &amp; Security › Accessibility.</li>
+    <li>If you connected an AI app, remove the <code>strum</code> entry from its MCP settings.</li>
+  </ol>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>Strum, in beta</span>
+    <nav aria-label="Footer">
+      <a href="help.html">Help</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="https://github.com/Jasshl/strum/issues/new/choose">Report a problem</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>

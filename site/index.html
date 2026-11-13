@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Strum · More gestures for your Mac's trackpad</title>
+  <meta name="description" content="Strum is a small menu bar app that adds gestures to your Mac's trackpad.">
+  <meta property="og:title" content="Strum">
+  <meta property="og:description" content="More gestures for your Mac's trackpad.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jasshl.github.io/strum/">
+  <meta property="og:image" content="https://jasshl.github.io/strum/img/icon-512.png">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://jasshl.github.io/strum/">
+  <meta name="theme-color" content="#f8edec" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#2a201e" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="img/icon-256.webp" alt="" width="34" height="34">Strum</a>
+    <nav class="nav" aria-label="Main">
+      <a href="#features">Features</a>
+      <a href="#install">Install</a>
+      <a href="help.html">Help</a>
+      <a class="button small" href="https://github.com/Jasshl/strum/releases/latest/download/Strum.dmg">Download</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="hero-band">
+  <section class="hero wrap">
+    <div class="hero-text">
+      <img class="icon" src="img/icon-256.webp" srcset="img/icon-256.webp 1x, img/icon-512.webp 2x" alt="" width="72" height="72">
+      <h1>More gestures for your Mac's trackpad</h1>
+      <p class="lede">Strum is a small menu bar app. Slide a finger along the edge of the trackpad to change the volume, or put four fingers on a window to move it. You can make your own gestures too.</p>
+      <a class="button" href="https://github.com/Jasshl/strum/releases/latest/download/Strum.dmg">
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3v10M5.5 8.5 10 13l4.5-4.5M4 17h12"/></svg>
+        Download the beta
+      </a>
+      <p class="meta">Needs macOS 27 and a Mac with Apple silicon.</p>
+    </div>
+
+    <svg class="pad" viewBox="0 0 440 300" role="img" aria-label="A trackpad. One finger slides up the right edge to turn the volume up, with a tick at each step. Then four fingers slide right and a window snaps to the right third of the screen. Then three fingers swipe down and a closed tab comes back.">
+      <defs>
+        <clipPath id="pad-clip"><rect x="10" y="10" width="420" height="280" rx="26"/></clipPath>
+        <linearGradient id="pad-trail" class="trail" x1="0" y1="1" x2="0" y2="0">
+          <stop offset="0" stop-opacity="0"/>
+          <stop offset="1" stop-opacity="0.4"/>
+        </linearGradient>
+        <linearGradient id="pad-trail-down" class="trail" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-opacity="0"/>
+          <stop offset="1" stop-opacity="0.4"/>
+        </linearGradient>
+      </defs>
+      <rect class="body" x="10" y="10" width="420" height="280" rx="26"/>
+      <rect class="edge" x="374" y="10" width="56" height="280" clip-path="url(#pad-clip)"/>
+      <g class="glyph">
+        <path d="M395 36h4l5-5v18l-5-5h-4z"/>
+        <path class="wave" d="M408 36.5a5 5 0 0 1 0 7M411.5 33a10 10 0 0 1 0 14"/>
+        <path d="M397 258h4l5-5v18l-5-5h-4z"/>
+      </g>
+      <g class="ticks">
+        <g class="t on" style="--k: 0"><path d="M395 230h14"/><circle class="ring" cx="402" cy="230" r="15"/></g>
+        <g class="t on" style="--k: 1"><path d="M395 210h14"/><circle class="ring" cx="402" cy="210" r="15"/></g>
+        <g class="t on" style="--k: 2"><path d="M395 190h14"/><circle class="ring" cx="402" cy="190" r="15"/></g>
+        <g class="t on" style="--k: 3"><path d="M395 170h14"/><circle class="ring" cx="402" cy="170" r="15"/></g>
+        <g class="t on" style="--k: 4"><path d="M395 150h14"/><circle class="ring" cx="402" cy="150" r="15"/></g>
+        <g class="t on" style="--k: 5"><path d="M395 130h14"/><circle class="ring" cx="402" cy="130" r="15"/></g>
+        <g class="t on" style="--k: 6"><path d="M395 110h14"/><circle class="ring" cx="402" cy="110" r="15"/></g>
+        <g class="t"><path d="M395 90h14"/></g>
+        <g class="t"><path d="M395 70h14"/></g>
+      </g>
+      <g clip-path="url(#pad-clip)">
+        <g class="finger">
+          <rect class="trail-bar" x="393" y="230" width="18" height="100" rx="9" fill="url(#pad-trail)"/>
+          <circle class="halo" cx="402" cy="230" r="26"/>
+          <circle class="dot" cx="402" cy="230" r="16"/>
+        </g>
+      </g>
+      <g class="tile">
+        <rect class="screen" x="34" y="30" width="76" height="50" rx="7"/>
+        <rect class="win-a" x="52" y="41" width="40" height="28" rx="3"/>
+        <rect class="win-b" x="84" y="35" width="21" height="40" rx="3"/>
+      </g>
+      <g class="hand">
+        <ellipse class="pulse" cx="192" cy="155" rx="66" ry="40"/>
+        <circle class="dot" cx="150" cy="163" r="12"/>
+        <circle class="dot" cx="178" cy="149" r="12"/>
+        <circle class="dot" cx="206" cy="149" r="12"/>
+        <circle class="dot" cx="234" cy="163" r="12"/>
+      </g>
+      <g class="tile3">
+        <rect class="screen" x="34" y="30" width="76" height="50" rx="7"/>
+        <rect class="tab" x="40" y="36" width="20" height="8" rx="2"/>
+        <rect class="tab" x="62" y="36" width="20" height="8" rx="2"/>
+        <rect class="tab-new" x="84" y="36" width="20" height="8" rx="2"/>
+        <rect class="ln" x="40" y="51" width="64" height="3" rx="1.5"/>
+        <rect class="ln" x="40" y="58" width="48" height="3" rx="1.5"/>
+        <rect class="ln" x="40" y="65" width="57" height="3" rx="1.5"/>
+      </g>
+      <g class="hand3">
+        <g class="trails3" fill="url(#pad-trail-down)">
+          <rect x="155" y="64" width="18" height="56" rx="9"/>
+          <rect x="183" y="56" width="18" height="56" rx="9"/>
+          <rect x="211" y="64" width="18" height="56" rx="9"/>
+        </g>
+        <circle class="dot" cx="164" cy="120" r="12"/>
+        <circle class="dot" cx="192" cy="112" r="12"/>
+        <circle class="dot" cx="220" cy="120" r="12"/>
+      </g>
+      <text class="cap cap-a" x="34" y="268">Right edge · volume up</text>
+      <text class="cap cap-b" x="34" y="268">Four fingers · slide right to snap</text>
+      <text class="cap cap-c" x="34" y="268">Three fingers down · reopen tab</text>
+    </svg>
+  </section>
+</div>
+
+<section class="features wrap" id="features" aria-label="Features">
+
+  <article class="feature">
+    <div class="feature-text">
+      <h3>Window gestures</h3>
+      <p>Rest four fingers on a window until you feel a tick, then:</p>
+      <ol class="moves">
+        <li style="--i: 0">
+          <svg viewBox="0 0 64 44" aria-hidden="true"><rect x="1" y="1" width="62" height="42" rx="8"/><g class="all"><circle cx="19" cy="25" r="3.5"/><circle cx="28" cy="19" r="3.5"/><circle cx="37" cy="19" r="3.5"/><circle cx="46" cy="25" r="3.5"/></g></svg>
+          <p><strong>Slide all four</strong> to snap the window into place. There are eight directions, and you see where it will go before you lift.</p>
+        </li>
+        <li style="--i: 1">
+          <svg viewBox="0 0 64 44" aria-hidden="true"><rect x="1" y="1" width="62" height="42" rx="8"/><circle class="up" cx="19" cy="25" r="3.5"/><circle class="up" cx="46" cy="25" r="3.5"/><g class="two"><circle cx="28" cy="19" r="3.5"/><circle cx="37" cy="19" r="3.5"/></g></svg>
+          <p><strong>Lift to two fingers</strong> to resize it from the nearest corner.</p>
+        </li>
+        <li style="--i: 2">
+          <svg viewBox="0 0 64 44" aria-hidden="true"><rect x="1" y="1" width="62" height="42" rx="8"/><circle class="up" cx="19" cy="25" r="3.5"/><circle class="up" cx="37" cy="19" r="3.5"/><circle class="up" cx="46" cy="25" r="3.5"/><circle class="one" cx="28" cy="19" r="3.5"/></svg>
+          <p><strong>Keep one finger down</strong> to drag it around. Flick sideways for half the screen, or diagonally for a quarter.</p>
+        </li>
+      </ol>
+      <p class="note">Three or five fingers work too. Settings › Windows has a short walk-through to practise with.</p>
+    </div>
+    <figure class="shot">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="img/windows-dark-1x.webp 1x, img/windows-dark.webp 2x">
+        <img src="img/windows-1x.webp" srcset="img/windows-1x.webp 1x, img/windows.webp 2x" width="410" height="315" loading="lazy" style="--w: 410px"
+             alt="The practice walk-through: eight window layouts arranged in a wheel around four resting fingers, with left two thirds highlighted.">
+      </picture>
+    </figure>
+  </article>
+
+  <article class="feature">
+    <div class="feature-text">
+      <h3>Edge slides</h3>
+      <p>Slide one finger along an edge of the trackpad to change the volume or brightness, switch tabs or skip tracks. You feel a small tick for each step.</p>
+      <svg class="edgemap" viewBox="0 0 240 150" aria-hidden="true">
+        <defs><clipPath id="edgemap-clip"><rect x="40" y="22" width="160" height="106" rx="14"/></clipPath></defs>
+        <rect class="body" x="40" y="22" width="160" height="106" rx="14"/>
+        <g class="e" style="--i: 0">
+          <rect class="z" x="180" y="22" width="20" height="106" clip-path="url(#edgemap-clip)"/>
+          <circle class="f y" cx="190" cy="100" r="6"/>
+          <g class="ic"><path class="fill" d="M209 71.5h3l4.5-4v15l-4.5-4h-3z"/><path d="M220 71.5a5 5 0 0 1 0 7"/></g>
+        </g>
+        <g class="e" style="--i: 1">
+          <rect class="z" x="40" y="22" width="160" height="18" clip-path="url(#edgemap-clip)"/>
+          <circle class="f x" cx="70" cy="31" r="6"/>
+          <g class="ic"><path d="M104 14h32M108 14V8h11v6M121 14V8h11v6"/></g>
+        </g>
+        <g class="e" style="--i: 2">
+          <rect class="z" x="40" y="22" width="20" height="106" clip-path="url(#edgemap-clip)"/>
+          <circle class="f y" cx="50" cy="100" r="6"/>
+          <g class="ic"><circle cx="22" cy="75" r="3.5"/><path d="M22 66.5v2M22 81.5v2M13.5 75h2M28.5 75h2M16 69l1.4 1.4M26.6 79.6 28 81M16 81l1.4-1.4M26.6 70.4 28 69"/></g>
+        </g>
+        <g class="e" style="--i: 3">
+          <rect class="z" x="40" y="110" width="160" height="18" clip-path="url(#edgemap-clip)"/>
+          <circle class="f x" cx="70" cy="119" r="6"/>
+          <g class="ic"><path class="fill" d="M112 136.5l6 4.5-6 4.5zM118.5 136.5l6 4.5-6 4.5z"/><path d="M127 136.5v9"/></g>
+        </g>
+      </svg>
+      <p class="note">Put ⌘⇥ on an edge and you can flip through the app switcher with one finger, then lift to pick.</p>
+    </div>
+    <figure class="shot">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="img/edges-dark-1x.webp 1x, img/edges-dark.webp 2x">
+        <img src="img/edges-1x.webp" srcset="img/edges-1x.webp 1x, img/edges.webp 2x" width="662" height="316" loading="lazy"
+             alt="Strum's gesture list with four edge slides: volume on the right edge, brightness on the left, tabs along the top and tracks along the bottom.">
+      </picture>
+    </figure>
+  </article>
+
+  <article class="sp" aria-labelledby="sp-title">
+    <div>
+      <h3 id="sp-title">Smooth Pointer</h3>
+      <p class="tags"><span class="tag">Beta</span><span class="tag">Magic Trackpad 2</span></p>
+      <p>Strum can draw the cursor in time with your display, so on a Magic Trackpad 2 it moves evenly instead of in small jumps.</p>
+    </div>
+    <figure class="trails">
+      <figcaption>macOS</figcaption>
+      <svg viewBox="84 14 426 46" aria-hidden="true">
+        <path d="M96 52C210 8 330 84 500 26"/>
+        <g class="frames"><circle cx="96" cy="52" r="4"/><circle cx="130" cy="42" r="4"/><circle cx="142" cy="40" r="4"/><circle cx="186" cy="37" r="4"/><circle cx="204" cy="38" r="4"/><circle cx="222" cy="39" r="4"/><circle cx="270" cy="43" r="4"/><circle cx="301" cy="46" r="4"/><circle cx="314" cy="47" r="4"/><circle cx="357" cy="48" r="4"/><circle cx="403" cy="46" r="4"/><circle cx="414" cy="45" r="4"/><circle cx="472" cy="34" r="4"/><circle cx="500" cy="26" r="4"/></g>
+        <circle class="cur" cx="500" cy="26" r="7">
+          <animate attributeName="cx" dur="2.4s" calcMode="discrete" repeatCount="indefinite" values="96;130;142;186;204;222;270;301;314;357;403;414;472;500;500;500;500;500;500;500"/>
+          <animate attributeName="cy" dur="2.4s" calcMode="discrete" repeatCount="indefinite" values="52;42;40;37;38;39;43;46;47;48;46;45;34;26;26;26;26;26;26;26"/>
+        </circle>
+      </svg>
+      <figcaption>Smooth Pointer</figcaption>
+      <svg viewBox="84 80 426 46" aria-hidden="true">
+        <path d="M96 118C210 74 330 150 500 92"/>
+        <g class="frames"><circle cx="96" cy="118" r="4"/><circle cx="122" cy="109" r="4"/><circle cx="149" cy="105" r="4"/><circle cx="176" cy="103" r="4"/><circle cx="204" cy="104" r="4"/><circle cx="232" cy="106" r="4"/><circle cx="262" cy="108" r="4"/><circle cx="292" cy="111" r="4"/><circle cx="323" cy="113" r="4"/><circle cx="355" cy="114" r="4"/><circle cx="389" cy="113" r="4"/><circle cx="424" cy="110" r="4"/><circle cx="461" cy="103" r="4"/><circle cx="500" cy="92" r="4"/></g>
+        <circle class="cur" cx="500" cy="92" r="7">
+          <animate attributeName="cx" dur="2.4s" calcMode="discrete" repeatCount="indefinite" values="96;122;149;176;204;232;262;292;323;355;389;424;461;500;500;500;500;500;500;500"/>
+          <animate attributeName="cy" dur="2.4s" calcMode="discrete" repeatCount="indefinite" values="118;109;105;103;104;106;108;111;113;114;113;110;103;92;92;92;92;92;92;92"/>
+        </circle>
+      </svg>
+      <p class="note">Where the cursor is drawn on each frame of the same movement.</p>
+    </figure>
+  </article>
+
+  <article class="feature">
+    <div class="feature-text">
+      <h3>Let an AI agent set it up</h3>
+      <p>Strum has an MCP server built in. Connect your AI app from Settings › Agents and ask for what you want, like a three-finger swipe down in Safari that reopens the last closed tab.</p>
+    </div>
+    <figure class="shot">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="img/ask-dark-1x.webp 1x, img/ask-dark.webp 2x">
+        <img src="img/ask-1x.webp" srcset="img/ask-1x.webp 1x, img/ask.webp 2x" width="740" height="225" loading="lazy"
+             alt="Example requests from Strum's Agents settings, such as making a three-finger swipe down in Safari reopen the last closed tab, and a note that scripts an agent adds wait for approval.">
+      </picture>
+    </figure>
+  </article>
+</section>
+
+<section class="own-band" aria-labelledby="own-title">
+  <div class="wrap">
+    <div class="own">
+      <h2 id="own-title">Your own gestures</h2>
+      <p>Pick a gesture, do it on the trackpad to record it, then choose what happens: a keyboard shortcut, media keys, a window layout, opening an app or a link, an AppleScript and so on. A gesture can work everywhere or in a single app.</p>
+    </div>
+    <ul class="chart">
+      <li style="--i: 0"><svg viewBox="0 0 64 44" aria-hidden="true"><rect x="1" y="1" width="62" height="42" rx="8"/><g class="m sw"><circle cx="14" cy="25" r="3.5"/><circle cx="23" cy="20" r="3.5"/><circle cx="32" cy="25" r="3.5"/></g><path d="M41 22h12M49 18l4 4-4 4"/></svg>Swipe</li>
+      <li style="--i: 1"><svg viewBox="0 0 64 44" aria-hidden="true"><rect x="1" y="1" width="62" height="42" rx="8"/><path d="M54 21V9M50 13l4-4 4 4M43 12h4M43 19h4M43 26h4M43 33h4"/><circle class="m ed" cx="54" cy="30" r="3.5"/></svg>Edge slide</li>
+      <li style="--i: 2"><svg viewBox="0 0 64 44" aria-hidden="true"><rect x="1" y="1" width="62" height="42" rx="8"/><circle class="m pr" cx="32" cy="22" r="3.5"/><circle class="o m tp" cx="32" cy="22" r="9"/></svg>Tap</li>
+      <li style="--i: 3"><svg viewBox="0 0 64 44" aria-hidden="true"><rect x="1" y="1" width="62" height="42" rx="8"/><path d="M22 27.5l7-4M29 28.5v-5h-5M42 16.5l-7 4M35 15.5v5h5"/><circle class="m pa" cx="16" cy="31" r="3.5"/><circle class="m pb" cx="48" cy="13" r="3.5"/></svg>Pinch</li>
+      <li style="--i: 4"><svg viewBox="0 0 64 44" aria-hidden="true"><rect x="1" y="1" width="62" height="42" rx="8"/><path d="M46 28a15 15 0 0 1-13 8M37 32l-4 4 4 3M18 16a15 15 0 0 1 13-8M27 12l4-4-4-3"/><g class="m ro"><circle cx="25" cy="27" r="3.5"/><circle cx="39" cy="17" r="3.5"/></g></svg>Rotate</li>
+      <li style="--i: 5"><svg viewBox="0 0 64 44" aria-hidden="true"><rect x="1" y="1" width="62" height="42" rx="8"/><circle cx="32" cy="22" r="3.5"/><circle class="o m ho" cx="32" cy="22" r="10" stroke-dasharray="3.2 4.65"/></svg>Hold</li>
+      <li style="--i: 6"><svg viewBox="0 0 64 44" aria-hidden="true"><rect x="1" y="1" width="62" height="42" rx="8"/><circle class="m fd" cx="32" cy="22" r="5"/><circle class="o m fr" cx="32" cy="22" r="9.5"/><circle class="o m fr" cx="32" cy="22" r="14" opacity=".4"/></svg>Force press</li>
+      <li style="--i: 7"><svg viewBox="0 0 64 44" aria-hidden="true"><rect x="1" y="1" width="62" height="42" rx="8"/><g class="m cd"><circle cx="27" cy="27" r="3.5"/><circle cx="37" cy="25" r="3.5"/></g><path class="m cl" d="M32 9v6M21 12l3 5M43 12l-3 5"/></svg>Click</li>
+      <li style="--i: 8"><svg viewBox="0 0 64 44" aria-hidden="true"><rect x="1" y="1" width="62" height="42" rx="8"/><circle cx="25" cy="25" r="3.5"/><circle class="o" cx="39" cy="25" r="4"/><circle class="m tt" cx="39" cy="25" r="3.5"/><path class="m ta" d="M39 8v8M36 13l3 3 3-3"/></svg>TipTap</li>
+    </ul>
+    <div class="also">
+      <div><h3>Gesture packs</h3><p>Ready-made sets to start from, like volume and brightness on the side edges.</p></div>
+      <div><h3>Games and excluded apps</h3><p>Strum switches off in apps you pick, and suggests the games it finds on your Mac.</p></div>
+      <div><h3>Import from BetterTouchTool</h3><p>Bring your trackpad gestures over from a BetterTouchTool preset.</p></div>
+      <div><h3>Live view</h3><p>Shows gestures as Strum sees them. If one does nothing, Why? tells you which gesture matched, or why none did.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="install wrap" id="install" aria-labelledby="install-title">
+  <div class="install-grid">
+    <div>
+      <h2 id="install-title">Install</h2>
+      <p class="intro">The beta isn't notarized yet, so macOS asks you to confirm the first time you open it.</p>
+      <ol class="steps">
+        <li>
+          <h3>Drag it to Applications</h3>
+          <p>Open the disk image and drag Strum into Applications, then open it. macOS will say it can't check the app. Click Done.</p>
+        </li>
+        <li>
+          <h3>Click Open Anyway</h3>
+          <p>Go to System Settings › Privacy &amp; Security, scroll down to Security and click <strong>Open Anyway</strong> next to Strum. Confirm with your password or Touch ID.</p>
+        </li>
+        <li>
+          <h3>Allow Accessibility</h3>
+          <p>Strum asks for this when it starts. It needs it to send keys and clicks and to move windows.</p>
+          <p class="aside">After that you'll find Strum in the menu bar, as a hand icon.</p>
+        </li>
+      </ol>
+    </div>
+
+    <aside class="card" id="download" aria-label="Download">
+      <h3>Strum beta</h3>
+      <a class="button" href="https://github.com/Jasshl/strum/releases/latest/download/Strum.dmg">
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3v10M5.5 8.5 10 13l4.5-4.5M4 17h12"/></svg>
+        Download
+      </a>
+      <p class="version">Version 0.1.0</p>
+      <ul class="reqs">
+        <li>macOS 27 or later</li>
+        <li>A Mac with Apple silicon</li>
+        <li>A built-in trackpad or a Magic Trackpad</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<section class="closing wrap" aria-label="Recovery and help">
+  <div class="closing-grid">
+    <div id="recovery">
+      <h2>If something gets stuck</h2>
+      <div class="keys" aria-hidden="true">
+        <kbd><span>⌃</span><small>control</small></kbd>
+        <kbd><span>⌥</span><small>option</small></kbd>
+        <kbd><span>⌘</span><small>command</small></kbd>
+        <kbd><small>esc</small></kbd>
+      </div>
+      <p>Press Control-Option-Command-Escape and macOS gets the pointer and keyboard back. It also lets go of any window you're holding and turns Smooth Pointer off.</p>
+      <p>It's in Strum's menu too, as Unstick pointer &amp; gestures.</p>
+    </div>
+    <div id="help">
+      <h2>Help</h2>
+      <p>The help page covers every gesture, importing from BetterTouchTool, conflicts with other apps and how to uninstall.</p>
+      <p>Found a bug? Choose Copy diagnostics in Strum's menu and paste it into <a href="https://github.com/Jasshl/strum/issues/new/choose">a report on GitHub</a>.</p>
+      <a class="button quiet" href="help.html">Read the help</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>Strum, in beta</span>
+    <nav aria-label="Footer">
+      <a href="help.html">Help</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="https://github.com/Jasshl/strum/issues/new/choose">Report a problem</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
