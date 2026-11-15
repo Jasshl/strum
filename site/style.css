@@ -163,6 +163,13 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 .demo .pad { fill: var(--pad-surface); stroke: var(--line-strong); stroke-width: 1.5; }
 .demo .finger { fill: var(--accent); opacity: 0; }
 .demo .ring { fill: none; stroke: var(--accent); stroke-width: 2; opacity: 0; }
+.demo .tab { fill: var(--line); }
+.demo .tabon { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 1.2; }
+.demo .hud { opacity: 0; }
+.demo .hudbg { fill: var(--bg); stroke: var(--line-strong); stroke-width: 1.2; }
+.demo .hudic { fill: var(--text-2); }
+.demo .hudfill { fill: var(--accent); }
+.demo .strip { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 1; opacity: 0; }
 .demo .cap { font: 600 13px/1 var(--font); letter-spacing: 0.02em; fill: var(--text-2); opacity: 0; }
 
 @media (max-width: 860px) {
