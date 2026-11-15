@@ -21,6 +21,11 @@
   --shot-line: rgba(0, 0, 0, 0.08);
   --shot-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 24px 48px -20px rgba(40, 20, 15, 0.32);
   --pad-surface: #f3f1f0;
+  --demo-desk: #f6efed;
+  --demo-win: #ffffff;
+  --demo-bar: #faf7f6;
+  --demo-ln: rgba(0, 0, 0, 0.16);
+  --demo-tab: rgba(0, 0, 0, 0.09);
   --pad-shadow: drop-shadow(0 18px 28px rgba(70, 35, 25, 0.12));
   --code-bg: #f4f1f0;
   --wide: 1120px;
@@ -52,6 +57,11 @@
     --shot-line: rgba(255, 255, 255, 0.1);
     --shot-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 24px 48px -18px rgba(0, 0, 0, 0.8);
     --pad-surface: #252221;
+    --demo-desk: #2b2422;
+    --demo-win: #3b3533;
+    --demo-bar: #48413e;
+    --demo-ln: rgba(255, 255, 255, 0.22);
+    --demo-tab: rgba(255, 255, 255, 0.12);
     --pad-shadow: drop-shadow(0 18px 28px rgba(0, 0, 0, 0.45));
     --code-bg: #221f1e;
   }
@@ -148,26 +158,26 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 .demo-wrap { justify-self: end; width: 100%; max-width: 520px; }
 .demo { width: 100%; height: auto; display: block; filter: var(--pad-shadow); }
 .demo .bezel { fill: var(--pad-surface); stroke: var(--line-strong); stroke-width: 1.5; }
-.demo .desk { fill: var(--stage); }
+.demo .desk { fill: var(--demo-desk); }
 .demo .menubar { fill: var(--line); }
 .demo .preview { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 1.5; stroke-dasharray: 6 5; opacity: 0; }
-.demo .win { fill: var(--bg); stroke: var(--line-strong); stroke-width: 1.2; }
-.demo .bar { fill: var(--bg-soft); }
+.demo .win { fill: var(--demo-win); stroke: var(--line-strong); stroke-width: 1.2; }
+.demo .bar { fill: var(--demo-bar); }
 .demo .tl.r { fill: #ff5f57; } .demo .tl.y { fill: #febc2e; } .demo .tl.g { fill: #28c840; }
-.demo .ln { fill: var(--line-strong); }
+.demo .ln { fill: var(--demo-ln); }
 .demo .cursor { fill: var(--text); stroke: var(--bg); stroke-width: 1.2; stroke-linejoin: round; }
 .demo .handle { fill: var(--accent); stroke: var(--bg); stroke-width: 2; opacity: 0; }
 .demo .wheel { opacity: 0; }
 .demo .track { fill: none; stroke: var(--accent); stroke-width: 1.5; opacity: 0.35; }
-.demo .spot { fill: var(--bg); stroke: var(--accent); stroke-width: 1.5; }
+.demo .spot { fill: var(--demo-win); stroke: var(--accent); stroke-width: 1.5; }
 .demo .lit { fill: var(--accent); opacity: 0; }
 .demo .pad { fill: var(--pad-surface); stroke: var(--line-strong); stroke-width: 1.5; }
 .demo .finger { fill: var(--accent); opacity: 0; }
 .demo .ring { fill: none; stroke: var(--accent); stroke-width: 2; opacity: 0; }
-.demo .tab { fill: var(--line); }
+.demo .tab { fill: var(--demo-tab); }
 .demo .tabon { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 1.2; }
 .demo .hud { opacity: 0; }
-.demo .hudbg { fill: var(--bg); stroke: var(--line-strong); stroke-width: 1.2; }
+.demo .hudbg { fill: var(--demo-win); stroke: var(--line-strong); stroke-width: 1.2; }
 .demo .hudic { fill: var(--text-2); }
 .demo .hudfill { fill: var(--accent); }
 .demo .strip { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 1; opacity: 0; }
