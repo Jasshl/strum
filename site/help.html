@@ -20,9 +20,10 @@
     <a class="brand" href="./"><img src="img/icon-256.webp" alt="" width="34" height="34">Strum</a>
     <nav class="nav" aria-label="Main">
       <a href="./#features">Features</a>
-      <a href="./#install">Install</a>
-      <a href="help.html" aria-current="page">Help</a>
-      <a class="button small" href="./#download">Coming soon</a>
+      <a href="./#pricing">Pricing</a>
+      <a href="./#faq">FAQ</a>
+      <a href="help.html">Help</a>
+      <!--pre--><span class="button small soon" aria-disabled="true">Coming soon</span><!--/pre--><!--live:<a class="button small" href="./#pricing">Buy</a>:live-->
     </nav>
   </div>
 </header>
@@ -32,6 +33,7 @@
   <ul class="toc" aria-label="On this page">
     <li><a href="#getting-started">Getting started</a></li>
     <li><a href="#gestures">What you can do</a></li>
+    <li><a href="#licence">Trial and licence</a></li>
     <li><a href="#btt">Coming from BetterTouchTool</a></li>
     <li><a href="#trouble">If something goes wrong</a></li>
     <li><a href="#conflicts">Known conflicts</a></li>
@@ -100,6 +102,17 @@
   <h3 id="agents">AI agents</h3>
   <p>Strum comes with a <code>strum</code> tool and MCP server, so an AI assistant can set up gestures for you. Its changes are checked like yours and can be undone (Settings › Agents).</p>
 
+  <h2 id="licence">Trial and licence</h2>
+  <p>You can try Strum free for 14 days, with everything on. After that your gestures stop until you enter a licence key. Your settings stay as they are.</p>
+  <ul>
+    <li><strong>Buy</strong> from the menu or <a href="./#pricing">this website</a>. Polar handles the payment and emails you a receipt with a link to your key.</li>
+    <li><strong>Enter the key</strong> in Settings › General › Licence, or choose Enter Licence in the menu.</li>
+    <li><strong>One licence covers 3 Macs.</strong> To move it to another Mac, choose Remove from This Mac in Settings › General, or remove the Mac in your Polar account.</li>
+    <li><strong>Being offline is fine.</strong> Once activated, Strum checks the licence about once a week when it can. Being offline never turns it off.</li>
+    <li><strong>Refunds</strong> within 7 days of buying, no questions asked. See the <a href="terms.html#refunds">terms</a>.</li>
+    <li>Every 1.x update is included.</li>
+  </ul>
+
   <h2 id="btt">Coming from BetterTouchTool</h2>
   <ol>
     <li>In BTT, export your preset (Presets › Export).</li>
@@ -115,9 +128,9 @@
     <li><strong>Press <kbd>⌃⌥⌘⎋</kbd></strong> (Control, Option, Command, Escape) to put the pointer, held keys and any window grab back to macOS. It also turns Smooth Pointer off.</li>
     <li><strong>The cursor won't move with the Magic Trackpad.</strong> Press ⌃⌥⌘⎋. If that doesn't help, run <code>/Applications/Strum.app/Contents/Helpers/strum pointer-restore</code> in Terminal, or switch the trackpad off and on again.</li>
     <li><strong>Keys act as if ⌘ (or ⌥, ⌃, ⇧) is held</strong> after Strum quit in the middle of a gesture. Press and release that key once.</li>
-    <li><strong>A gesture does nothing.</strong> Open Live view and look at the gesture log. "Why?" tells you which gesture matched, or why none did.</li>
+    <li><strong>A gesture does nothing.</strong> Open the menu and click Why? beside the last gesture. It tells you which gesture matched, or why none did. For a log of every gesture, turn on Show advanced settings in Settings › General and open Live view.</li>
     <li><strong>Strum seems to be off.</strong> The menu bar icon shows when it's paused or you're in an excluded app. Open the menu to resume it, or to include the app again.</li>
-    <li><strong>To report a problem</strong>, choose Copy diagnostics in the menu and paste the result into <a href="https://github.com/Jasshl/strum/issues/new/choose">a report on GitHub</a>. It doesn't include device names, serial numbers or home folder paths.</li>
+    <li><strong>To report a problem</strong>, choose Copy diagnostics in the menu and send it to us from the <a href="contact.html">contact page</a>. It doesn't include device names, serial numbers or home folder paths.</li>
   </ul>
 
   <h2 id="conflicts">Known conflicts</h2>
@@ -129,6 +142,7 @@
 
   <h2 id="uninstall">Uninstall</h2>
   <ol>
+    <li>To free this Mac's place on your licence, choose Remove from This Mac in Settings › General.</li>
     <li>Quit Strum from its menu.</li>
     <li>If you turned on "Open Strum at login", remove it from Login Items.</li>
     <li>Delete Strum.app and <code>~/Library/Application Support/Strum</code>.</li>
@@ -143,7 +157,8 @@
     <nav aria-label="Footer">
       <a href="help.html">Help</a>
       <a href="privacy.html">Privacy</a>
-      <a href="https://github.com/Jasshl/strum/issues/new/choose">Report a problem</a>
+      <a href="terms.html">Terms</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </div>
 </footer>

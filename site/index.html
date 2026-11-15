@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Strum · More gestures for your Mac's trackpad</title>
-  <meta name="description" content="Strum is a small menu bar app that adds gestures to your Mac's trackpad.">
+  <title>Strum · Trackpad gestures for your Mac</title>
+  <meta name="description" content="Strum adds gestures to your Mac's trackpad. Rest four fingers on a window to snap, move or resize it. Free for 14 days.">
   <meta property="og:title" content="Strum">
-  <meta property="og:description" content="More gestures for your Mac's trackpad.">
+  <meta property="og:description" content="Trackpad gestures for your Mac. Snap, move and resize windows with four fingers.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://jasshl.github.io/strum/">
   <meta property="og:image" content="https://jasshl.github.io/strum/img/icon-512.png">
@@ -26,9 +26,10 @@
     <a class="brand" href="./"><img src="img/icon-256.webp" alt="" width="34" height="34">Strum</a>
     <nav class="nav" aria-label="Main">
       <a href="#features">Features</a>
-      <a href="#install">Install</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
       <a href="help.html">Help</a>
-      <a class="button small" href="./#download">Coming soon</a>
+      <!--pre--><span class="button small soon" aria-disabled="true">Coming soon</span><!--/pre--><!--live:<a class="button small" href="#pricing">Buy</a>:live-->
     </nav>
   </div>
 </header>
@@ -38,84 +39,49 @@
   <section class="hero wrap">
     <div class="hero-text">
       <img class="icon" src="img/icon-256.webp" srcset="img/icon-256.webp 1x, img/icon-512.webp 2x" alt="" width="72" height="72">
-      <h1>More gestures for your Mac's trackpad</h1>
-      <p class="lede">Strum is a small menu bar app. Slide a finger along the edge of the trackpad to change the volume, or put four fingers on a window to move it. You can make your own gestures too.</p>
-      <p class="soon">Strum 1.0 is coming soon.</p>
-      <p class="meta">Needs macOS 27 and a Mac with Apple silicon.</p>
+      <h1>Move and snap windows with four fingers</h1>
+      <p class="lede">Strum is a small menu bar app that adds gestures to your Mac's trackpad. Rest your fingers on a window to put it anywhere, slide along the edges for volume and brightness, and make your own gestures for the rest.</p>
+      <div class="actions">
+        <!--pre--><span class="button soon" aria-disabled="true">Coming soon</span><!--/pre--><!--live:<a class="button" href="https://github.com/Jasshl/strum/releases/latest/download/Strum.dmg"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3v10M5.5 8.5 10 13l4.5-4.5M4 17h12"/></svg> Download free trial</a> <a class="button quiet" href="CHECKOUT_URL">Buy for $10</a>:live-->
+      </div>
+      <p class="price-line">Launch price: $10 for the first 100 copies, then $15.</p>
+      <p class="meta">Free for 14 days. Needs macOS 27 and a Mac with Apple silicon.</p>
     </div>
 
-    <svg class="pad" viewBox="0 0 440 300" role="img" aria-label="A trackpad. One finger slides up the right edge to turn the volume up, with a tick at each step. Then four fingers slide right and a window snaps to the right third of the screen. Then three fingers swipe down and a closed tab comes back.">
-      <defs>
-        <clipPath id="pad-clip"><rect x="10" y="10" width="420" height="280" rx="26"/></clipPath>
-        <linearGradient id="pad-trail" class="trail" x1="0" y1="1" x2="0" y2="0">
-          <stop offset="0" stop-opacity="0"/>
-          <stop offset="1" stop-opacity="0.4"/>
-        </linearGradient>
-        <linearGradient id="pad-trail-down" class="trail" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-opacity="0"/>
-          <stop offset="1" stop-opacity="0.4"/>
-        </linearGradient>
-      </defs>
-      <rect class="body" x="10" y="10" width="420" height="280" rx="26"/>
-      <rect class="edge" x="374" y="10" width="56" height="280" clip-path="url(#pad-clip)"/>
-      <g class="glyph">
-        <path d="M395 36h4l5-5v18l-5-5h-4z"/>
-        <path class="wave" d="M408 36.5a5 5 0 0 1 0 7M411.5 33a10 10 0 0 1 0 14"/>
-        <path d="M397 258h4l5-5v18l-5-5h-4z"/>
+    <div class="demo-wrap">
+      <svg class="demo" viewBox="0 0 560 456" role="img" aria-label="A Mac screen and a trackpad. Four fingers rest on the trackpad and slide left, and the window snaps to the left half of the screen. Then two fingers stay down and slide, and the window grows from its corner. Then one finger drags the window and flicks it to the right half.">
+      <defs><clipPath id="demo-win-clip"><rect x="180" y="78" width="200" height="136" rx="7"><animate attributeName="x" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.1875;0.2167;0.3217;0.3225;0.4458;0.525;0.655;0.6558;0.775;0.8333;0.8542;0.8792;0.9883;0.9892;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="180;180;26;26;180;180;180;180;180;180;250;250;283;283;180;180"/><animate attributeName="y" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.1875;0.2167;0.3217;0.3225;0.4458;0.525;0.655;0.6558;0.775;0.8333;0.8542;0.8792;0.9883;0.9892;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="78;78;38;38;78;78;78;78;78;78;78;78;38;38;78;78"/><animate attributeName="width" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.1875;0.2167;0.3217;0.3225;0.4458;0.525;0.655;0.6558;0.775;0.8333;0.8542;0.8792;0.9883;0.9892;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="200;200;251;251;200;200;276;276;200;200;200;200;251;251;200;200"/><animate attributeName="height" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.1875;0.2167;0.3217;0.3225;0.4458;0.525;0.655;0.6558;0.775;0.8333;0.8542;0.8792;0.9883;0.9892;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="136;136;226;226;136;136;176;176;136;136;136;136;226;226;136;136"/></rect></clipPath></defs>
+      <rect class="bezel" x="10" y="8" width="540" height="280" rx="16"/>
+      <rect class="desk" x="20" y="18" width="520" height="252" rx="8"/>
+      <rect class="menubar" x="20" y="18" width="520" height="14" rx="0"/>
+      <rect class="preview" x="26" y="38" width="251" height="226" rx="7"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.1375;0.1542;0.1917;0.2167;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="0;0;0.9;0.9;0;0"/></rect>
+      <rect class="preview" x="283" y="38" width="251" height="226" rx="7"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.8375;0.85;0.8667;0.8917;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="0;0;0.9;0.9;0;0"/></rect>
+      <g class="window"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.3083;0.3217;0.3225;0.3375;0.6417;0.655;0.6558;0.6708;0.975;0.9883;0.9892;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="1;1;0;0;1;1;0;0;1;1;0;0;1"/>
+      <rect class="win" x="180" y="78" width="200" height="136" rx="7"><animate attributeName="x" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.1875;0.2167;0.3217;0.3225;0.4458;0.525;0.655;0.6558;0.775;0.8333;0.8542;0.8792;0.9883;0.9892;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="180;180;26;26;180;180;180;180;180;180;250;250;283;283;180;180"/><animate attributeName="y" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.1875;0.2167;0.3217;0.3225;0.4458;0.525;0.655;0.6558;0.775;0.8333;0.8542;0.8792;0.9883;0.9892;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="78;78;38;38;78;78;78;78;78;78;78;78;38;38;78;78"/><animate attributeName="width" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.1875;0.2167;0.3217;0.3225;0.4458;0.525;0.655;0.6558;0.775;0.8333;0.8542;0.8792;0.9883;0.9892;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="200;200;251;251;200;200;276;276;200;200;200;200;251;251;200;200"/><animate attributeName="height" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.1875;0.2167;0.3217;0.3225;0.4458;0.525;0.655;0.6558;0.775;0.8333;0.8542;0.8792;0.9883;0.9892;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="136;136;226;226;136;136;176;176;136;136;136;136;226;226;136;136"/></rect>
+      <g clip-path="url(#demo-win-clip)"><g><animateTransform attributeName="transform" type="translate" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.1875;0.2167;0.3217;0.3225;0.4458;0.525;0.655;0.6558;0.775;0.8333;0.8542;0.8792;0.9883;0.9892;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="180 78;180 78;26 38;26 38;180 78;180 78;180 78;180 78;180 78;180 78;250 78;250 78;283 38;283 38;180 78;180 78"/>
+      <rect class="bar" x="0" y="0" width="600" height="18"/>
+      <circle class="tl r" cx="11" cy="9" r="3.2"/><circle class="tl y" cx="21" cy="9" r="3.2"/><circle class="tl g" cx="31" cy="9" r="3.2"/>
+      <rect class="ln" x="14" y="32" width="120" height="5" rx="2.5"/>
+      <rect class="ln" x="14" y="46" width="150" height="5" rx="2.5"/>
+      <rect class="ln" x="14" y="60" width="96" height="5" rx="2.5"/>
+      <rect class="ln" x="14" y="74" width="136" height="5" rx="2.5"/>
+      <rect class="ln" x="14" y="88" width="70" height="5" rx="2.5"/>
+      <path class="cursor" d="M118 58v17l4.5-4.2 3 6.6 2.6-1.2-3-6.4 6.1-.3z"/>
+      </g></g>
+      <circle class="handle" cx="380" cy="214" r="7"><animate attributeName="cx" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.4458;0.525;0.655;0.6558;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="380;380;456;456;380;380"/><animate attributeName="cy" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.4458;0.525;0.655;0.6558;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="214;214;254;254;214;214"/><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.4292;0.4417;0.5292;0.5417;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="0;0;1;1;0;0"/></circle>
       </g>
-      <g class="ticks">
-        <g class="t on" style="--k: 0"><path d="M395 230h14"/><circle class="ring" cx="402" cy="230" r="15"/></g>
-        <g class="t on" style="--k: 1"><path d="M395 210h14"/><circle class="ring" cx="402" cy="210" r="15"/></g>
-        <g class="t on" style="--k: 2"><path d="M395 190h14"/><circle class="ring" cx="402" cy="190" r="15"/></g>
-        <g class="t on" style="--k: 3"><path d="M395 170h14"/><circle class="ring" cx="402" cy="170" r="15"/></g>
-        <g class="t on" style="--k: 4"><path d="M395 150h14"/><circle class="ring" cx="402" cy="150" r="15"/></g>
-        <g class="t on" style="--k: 5"><path d="M395 130h14"/><circle class="ring" cx="402" cy="130" r="15"/></g>
-        <g class="t on" style="--k: 6"><path d="M395 110h14"/><circle class="ring" cx="402" cy="110" r="15"/></g>
-        <g class="t"><path d="M395 90h14"/></g>
-        <g class="t"><path d="M395 70h14"/></g>
-      </g>
-      <g clip-path="url(#pad-clip)">
-        <g class="finger">
-          <rect class="trail-bar" x="393" y="230" width="18" height="100" rx="9" fill="url(#pad-trail)"/>
-          <circle class="halo" cx="402" cy="230" r="26"/>
-          <circle class="dot" cx="402" cy="230" r="16"/>
-        </g>
-      </g>
-      <g class="tile">
-        <rect class="screen" x="34" y="30" width="76" height="50" rx="7"/>
-        <rect class="win-a" x="52" y="41" width="40" height="28" rx="3"/>
-        <rect class="win-b" x="84" y="35" width="21" height="40" rx="3"/>
-      </g>
-      <g class="hand">
-        <ellipse class="pulse" cx="192" cy="155" rx="66" ry="40"/>
-        <circle class="dot" cx="150" cy="163" r="12"/>
-        <circle class="dot" cx="178" cy="149" r="12"/>
-        <circle class="dot" cx="206" cy="149" r="12"/>
-        <circle class="dot" cx="234" cy="163" r="12"/>
-      </g>
-      <g class="tile3">
-        <rect class="screen" x="34" y="30" width="76" height="50" rx="7"/>
-        <rect class="tab" x="40" y="36" width="20" height="8" rx="2"/>
-        <rect class="tab" x="62" y="36" width="20" height="8" rx="2"/>
-        <rect class="tab-new" x="84" y="36" width="20" height="8" rx="2"/>
-        <rect class="ln" x="40" y="51" width="64" height="3" rx="1.5"/>
-        <rect class="ln" x="40" y="58" width="48" height="3" rx="1.5"/>
-        <rect class="ln" x="40" y="65" width="57" height="3" rx="1.5"/>
-      </g>
-      <g class="hand3">
-        <g class="trails3" fill="url(#pad-trail-down)">
-          <rect x="155" y="64" width="18" height="56" rx="9"/>
-          <rect x="183" y="56" width="18" height="56" rx="9"/>
-          <rect x="211" y="64" width="18" height="56" rx="9"/>
-        </g>
-        <circle class="dot" cx="164" cy="120" r="12"/>
-        <circle class="dot" cx="192" cy="112" r="12"/>
-        <circle class="dot" cx="220" cy="120" r="12"/>
-      </g>
-      <text class="cap cap-a" x="34" y="268">Right edge · volume up</text>
-      <text class="cap cap-b" x="34" y="268">Four fingers · slide right to snap</text>
-      <text class="cap cap-c" x="34" y="268">Three fingers down · reopen tab</text>
-    </svg>
+      <g class="wheel"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.0792;0.0958;0.1833;0.2;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="0;0;1;1;0;0"/><circle class="track" cx="280" cy="146" r="46"/><circle class="spot" cx="326.0" cy="146.0" r="5"/><circle class="spot" cx="312.5" cy="113.5" r="5"/><circle class="spot" cx="280.0" cy="100.0" r="5"/><circle class="spot" cx="247.5" cy="113.5" r="5"/><circle class="spot" cx="234.0" cy="146.0" r="5"/><circle class="spot" cx="247.5" cy="178.5" r="5"/><circle class="spot" cx="280.0" cy="192.0" r="5"/><circle class="spot" cx="312.5" cy="178.5" r="5"/><circle class="lit" cx="234" cy="146" r="7"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.1292;0.1417;0.1833;0.2;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="0;0;1;1;0;0"/></circle></g>
+      <rect class="pad" x="180" y="302" width="200" height="120" rx="14"/>
+      <ellipse class="ring" cx="280" cy="366" rx="56" ry="30"><animate attributeName="rx" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.0667;0.1042;0.105;0.4;0.4375;0.4383;0.7333;0.7708;0.7717;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="56;56;76;56;56;76;56;56;76;56;56"/><animate attributeName="ry" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.0667;0.1042;0.105;0.4;0.4375;0.4383;0.7333;0.7708;0.7717;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="30;30;42;30;30;42;30;30;42;30;30"/><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.0658;0.0667;0.1042;0.3992;0.4;0.4375;0.7325;0.7333;0.7708;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="0;0;0.6;0;0;0.6;0;0;0.6;0;0"/></ellipse>
+      <g><animateTransform attributeName="transform" type="translate" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.1042;0.1667;0.1958;0.2;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="0 0;0 0;-36 0;-36 0;0 0;0 0"/><circle class="finger" cx="238" cy="374" r="9"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.0333;0.0583;0.1792;0.1958;0.3667;0.3917;0.4208;0.4375;0.7;0.725;0.7542;0.7708;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="0;0;1;1;0;0;1;1;0;0;1;1;0;0"/></circle></g>
+      <g><animateTransform attributeName="transform" type="translate" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.1042;0.1667;0.1958;0.2;0.4458;0.525;0.5417;0.55;0.775;0.8333;0.8542;0.86;0.875;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="0 0;0 0;-36 0;-36 0;0 0;0 0;34 20;34 20;0 0;0 0;24 0;44 0;44 0;0 0;0 0"/><circle class="finger" cx="264" cy="356" r="9"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.0333;0.0583;0.1792;0.1958;0.3667;0.3917;0.5292;0.5417;0.7;0.725;0.85;0.86;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="0;0;1;1;0;0;1;1;0;0;1;1;0;0"/></circle></g>
+      <g><animateTransform attributeName="transform" type="translate" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.1042;0.1667;0.1958;0.2;0.4458;0.525;0.5417;0.55;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="0 0;0 0;-36 0;-36 0;0 0;0 0;34 20;34 20;0 0;0 0"/><circle class="finger" cx="296" cy="356" r="9"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.0333;0.0583;0.1792;0.1958;0.3667;0.3917;0.5292;0.5417;0.7;0.725;0.7542;0.7708;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="0;0;1;1;0;0;1;1;0;0;1;1;0;0"/></circle></g>
+      <g><animateTransform attributeName="transform" type="translate" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.1042;0.1667;0.1958;0.2;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="0 0;0 0;-36 0;-36 0;0 0;0 0"/><circle class="finger" cx="322" cy="374" r="9"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.0333;0.0583;0.1792;0.1958;0.3667;0.3917;0.4208;0.4375;0.7;0.725;0.7542;0.7708;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="0;0;1;1;0;0;1;1;0;0;1;1;0;0"/></circle></g>
+      <text class="cap" x="280" y="448" text-anchor="middle">Rest four fingers, then slide to snap<animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0;0.025;0.3;0.3208;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="0;0;1;1;0;0"/></text>
+      <text class="cap" x="280" y="448" text-anchor="middle">Lift to two fingers to resize<animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.3333;0.3583;0.6333;0.6542;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="0;0;1;1;0;0"/></text>
+      <text class="cap" x="280" y="448" text-anchor="middle">Lift to one to move it, or flick it to a side<animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.6667;0.6917;0.9667;0.9875;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="0;0;1;1;0;0"/></text>
+      </svg>
+    </div>
   </section>
 </div>
 
@@ -259,38 +225,103 @@
   </div>
 </section>
 
+<section class="pricing wrap" id="pricing" aria-labelledby="pricing-title">
+  <div class="pricing-grid">
+    <div>
+      <h2 id="pricing-title">Pricing</h2>
+      <p class="intro">Try everything free for 14 days. If you keep it, you pay once.</p>
+      <ul class="includes">
+        <li>One licence works on 3 of your Macs.</li>
+        <li>Every 1.x update is included.</li>
+        <li>Changed your mind? You get a refund within 7 days of buying, no questions asked.</li>
+        <li>When the trial ends, your gestures pause until you enter a key. Your settings stay.</li>
+      </ul>
+    </div>
+    <aside class="card price-card" aria-label="Price">
+      <p class="launch">Launch price</p>
+      <p class="price"><span class="now">$10</span> <s class="was" aria-label="usually $15">$15</s></p>
+      <p class="price-note">for the first 100 copies, then $15</p>
+      <!--pre--><p class="soon">Coming soon</p><!--/pre--><!--live:<a class="button" href="CHECKOUT_URL">Buy Strum</a><a class="button quiet" href="https://github.com/Jasshl/strum/releases/latest/download/Strum.dmg">Download free trial</a>:live-->
+      <p class="small">Polar handles the payment and works out any sales tax or VAT at checkout. Your licence key arrives by email.</p>
+    </aside>
+  </div>
+</section>
+
 <section class="install wrap" id="install" aria-labelledby="install-title">
   <div class="install-grid">
     <div>
-      <h2 id="install-title">Install</h2>
-      <p class="intro">Strum isn't notarized by Apple, so macOS asks you to confirm the first time you open it.</p>
+      <h2 id="install-title">Opening it the first time</h2>
+      <p class="intro">Strum isn't notarized by Apple, so macOS asks you to confirm before it opens the first time. It takes a minute, once.</p>
       <ol class="steps">
         <li>
           <h3>Drag it to Applications</h3>
-          <p>Open the disk image and drag Strum into Applications, then open it. macOS will say it can't check the app. Click Done.</p>
+          <p>Open the disk image, drag Strum into Applications and open it. macOS says it can't check the app. Click Done.</p>
         </li>
         <li>
           <h3>Click Open Anyway</h3>
-          <p>Go to System Settings › Privacy &amp; Security, scroll down to Security and click <strong>Open Anyway</strong> next to Strum. Confirm with your password or Touch ID.</p>
+          <p>Go to System Settings › Privacy &amp; Security and scroll down to Security. Click <strong>Open Anyway</strong> next to Strum, then confirm with your password or Touch ID.</p>
         </li>
         <li>
           <h3>Allow Accessibility</h3>
-          <p>Strum asks for this when it starts. It needs it to send keys and clicks and to move windows.</p>
+          <p>Strum asks for this when it starts. It needs it to press keys, click and move windows.</p>
           <p class="aside">After that you'll find Strum in the menu bar, as a hand icon.</p>
         </li>
       </ol>
     </div>
-
-    <aside class="card" id="download" aria-label="Download">
-      <h3>Strum 1.0</h3>
-      <p class="soon">Coming soon</p>
-      <ul class="reqs">
-        <li>macOS 27 or later</li>
-        <li>A Mac with Apple silicon</li>
-        <li>A built-in trackpad or a Magic Trackpad</li>
-      </ul>
-    </aside>
+    <figure class="settings-mock" aria-label="Drawing of System Settings, Privacy and Security: under Security, a line says Strum was blocked to protect your Mac, with an Open Anyway button beside it.">
+      <div class="mock-window" aria-hidden="true">
+        <div class="mock-bar"><i></i><i></i><i></i><span>Privacy &amp; Security</span></div>
+        <div class="mock-body">
+          <p class="mock-head">Security</p>
+          <div class="mock-row"><span>Allow applications from</span><span class="mock-pop">App Store &amp; Known Developers</span></div>
+          <div class="mock-row hl"><span>“Strum” was blocked to protect your Mac.</span><span class="mock-btn">Open Anyway</span></div>
+          <div class="mock-row dim"><span>FileVault</span><span>On</span></div>
+        </div>
+      </div>
+      <figcaption>Where Open Anyway appears. Your settings may look slightly different.</figcaption>
+    </figure>
   </div>
+  <ul class="reqs-line">
+    <li>macOS 27 or later</li>
+    <li>A Mac with Apple silicon</li>
+    <li>A built-in trackpad or a Magic Trackpad</li>
+  </ul>
+</section>
+
+<section class="faq wrap narrow" id="faq" aria-labelledby="faq-title">
+  <h2 id="faq-title">Questions</h2>
+  <details>
+    <summary>Why does macOS say it can't check Strum?</summary>
+    <p>macOS only opens an app straight away if Apple has notarized it. Strum isn't notarized, so the first time, you confirm it yourself. <a href="#install">The steps are above.</a></p>
+  </details>
+  <details>
+    <summary>Which Macs and trackpads does it work with?</summary>
+    <p>Any Mac with Apple silicon running macOS 27 or later, with its built-in trackpad or a Magic Trackpad. Smooth Pointer needs a Magic Trackpad.</p>
+  </details>
+  <details>
+    <summary>How many Macs can I use it on?</summary>
+    <p>Three. To move it to another Mac, choose Remove from This Mac in Settings › General, or remove the old Mac in your Polar account.</p>
+  </details>
+  <details>
+    <summary>What happens when the trial ends?</summary>
+    <p>Your gestures pause and Strum offers to take a licence key. Everything you set up stays, and it all works again as soon as you enter one.</p>
+  </details>
+  <details>
+    <summary>Can I get a refund?</summary>
+    <p>Yes. Within 7 days of buying, just ask and you'll get your money back. After that, write anyway if something's wrong, for example if a macOS update stops it working.</p>
+  </details>
+  <details>
+    <summary>Does Strum need the internet, or collect anything?</summary>
+    <p>No analytics and no tracking. Once you enter a licence key, Strum checks it with Polar about once a week, and being offline never turns it off. It can also check for updates if you turn that on. <a href="privacy.html">The privacy page</a> has the details.</p>
+  </details>
+  <details>
+    <summary>I use BetterTouchTool. Can I bring my gestures?</summary>
+    <p>Yes, Strum imports trackpad gestures from a BetterTouchTool preset and lists anything it can't bring over. If you keep both running, give each gesture to one app.</p>
+  </details>
+  <details>
+    <summary>Something got stuck. What do I do?</summary>
+    <p>Press Control-Option-Command-Escape. macOS gets the pointer and keys back straight away. Then see <a href="help.html">the help page</a>, or <a href="contact.html">get in touch</a>.</p>
+  </details>
 </section>
 
 <section class="closing wrap" aria-label="Recovery and help">
@@ -309,7 +340,7 @@
     <div id="help">
       <h2>Help</h2>
       <p>The help page covers every gesture, importing from BetterTouchTool, conflicts with other apps and how to uninstall.</p>
-      <p>Found a bug? Choose Copy diagnostics in Strum's menu and paste it into <a href="https://github.com/Jasshl/strum/issues/new/choose">a report on GitHub</a>.</p>
+      <p>Found a bug? Choose Copy diagnostics in Strum's menu and send it to us from <a href="contact.html">the contact page</a>.</p>
       <a class="button quiet" href="help.html">Read the help</a>
     </div>
   </div>
@@ -322,9 +353,23 @@
     <nav aria-label="Footer">
       <a href="help.html">Help</a>
       <a href="privacy.html">Privacy</a>
-      <a href="https://github.com/Jasshl/strum/issues/new/choose">Report a problem</a>
+      <a href="terms.html">Terms</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </div>
 </footer>
+<script>
+  // The window demo: one still frame for reduced motion, and paused while the pointer is on it.
+  (function () {
+    var demo = document.querySelector('.demo');
+    if (!demo || !demo.pauseAnimations) return;
+    var still = window.matchMedia('(prefers-reduced-motion: reduce)');
+    function apply() { if (still.matches) { demo.pauseAnimations(); demo.setCurrentTime(1.9); } else { demo.unpauseAnimations(); } }
+    apply();
+    still.addEventListener('change', apply);
+    demo.addEventListener('mouseenter', function () { demo.pauseAnimations(); });
+    demo.addEventListener('mouseleave', function () { if (!still.matches) demo.unpauseAnimations(); });
+  })();
+</script>
 </body>
 </html>

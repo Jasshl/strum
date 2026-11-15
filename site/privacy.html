@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy · Strum</title>
-  <meta name="description" content="What Strum reads, what it keeps on your Mac, and what goes into diagnostics.">
+  <meta name="description" content="What Strum sends, what it keeps on your Mac, and what goes into diagnostics.">
   <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#141212" media="(prefers-color-scheme: dark)">
   <link rel="icon" type="image/png" href="img/favicon.png">
@@ -20,18 +20,28 @@
     <a class="brand" href="./"><img src="img/icon-256.webp" alt="" width="34" height="34">Strum</a>
     <nav class="nav" aria-label="Main">
       <a href="./#features">Features</a>
-      <a href="./#install">Install</a>
+      <a href="./#pricing">Pricing</a>
+      <a href="./#faq">FAQ</a>
       <a href="help.html">Help</a>
-      <a class="button small" href="./#download">Coming soon</a>
+      <!--pre--><span class="button small soon" aria-disabled="true">Coming soon</span><!--/pre--><!--live:<a class="button small" href="./#pricing">Buy</a>:live-->
     </nav>
   </div>
 </header>
 
 <main id="main" class="page wrap narrow">
-  <h1>Privacy</h1>
-  <p class="lede">Strum never connects to the internet. There are no analytics and no crash reports.</p>
+<h1>Privacy</h1>
+  <p class="lede">Strum has no analytics and no crash reports. It only goes online for your licence and, if you want them, updates.</p>
 
-  <h2>What it reads</h2>
+  <h2>What goes online</h2>
+  <ul>
+    <li><strong>Your licence.</strong> During the trial Strum sends nothing. When you enter a licence key, it sends the key to Polar, the shop that sells Strum, with the kind of Mac it's on (for example "MacBook Pro (14-inch, 2021)"), so you can tell your Macs apart in your Polar account. After that it checks the licence about once a week, sending the key and this Mac's activation number. Never the computer's name, your name or anything about how you use Strum.</li>
+    <li><strong>Updates</strong>, only if you turn on update checks in Settings › General. Strum then asks GitHub for the newest version once a day.</li>
+  </ul>
+
+  <h2>Buying</h2>
+  <p>Polar takes the payment and keeps your email address and receipt, under <a href="https://polar.sh/legal/privacy">its own privacy policy</a>. We see your order in Polar: your email address, what you bought, your country and your licence key. We use it to help you and to send refunds, nothing else.</p>
+
+  <h2>What Strum reads</h2>
   <ul>
     <li>Touch positions and pressure from your trackpads. These stay in memory.</li>
     <li>Which app is in front, so gestures can work per app.</li>
@@ -46,16 +56,16 @@
     <li>a status file;</li>
     <li>pointer recordings (<code>traces/</code>), only if you run the pointer test or start a recording. They hold positions, sizes and times, nothing else.</li>
   </ul>
-  <p>Strum never logs or stores device names, Bluetooth addresses or serial numbers.</p>
+  <p>Your licence key and the date your trial started are kept in your keychain. Strum never logs or stores device names, Bluetooth addresses or serial numbers.</p>
 
   <h2>Diagnostics</h2>
-  <p>Diagnostics you copy for a bug report contain the Strum and macOS versions, your Mac's model, the kinds and sizes of your trackpads, your settings and an outline of your gestures. Scripts, URLs, app names and home folder paths are left out. You decide where to paste them.</p>
+  <p>Diagnostics you copy for a bug report contain the Strum and macOS versions, your Mac's model, the kinds and sizes of your trackpads, your settings and an outline of your gestures. Scripts, URLs, app names and home folder paths are left out. You decide where to send them.</p>
 
   <h2>AI agents</h2>
   <p>Agents can only reach your settings through the <code>strum</code> tool you connect them to. Scripts, Shortcuts and similar actions they add won't run until you approve them in Strum.</p>
 
   <h2>This website</h2>
-  <p>The site has no cookies, analytics or trackers.</p>
+  <p>The site has no cookies, analytics or trackers. The Buy button takes you to Polar's checkout.</p>
 </main>
 
 <footer class="site-footer">
@@ -64,7 +74,8 @@
     <nav aria-label="Footer">
       <a href="help.html">Help</a>
       <a href="privacy.html">Privacy</a>
-      <a href="https://github.com/Jasshl/strum/issues/new/choose">Report a problem</a>
+      <a href="terms.html">Terms</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </div>
 </footer>

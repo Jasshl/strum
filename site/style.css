@@ -137,107 +137,37 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 .hero .lede { font-size: clamp(19px, 2.2vw, 22px); color: var(--text-2); max-width: 24em; margin: 0 0 32px; line-height: 1.4; }
 .hero .meta { margin: 18px 0 0; font-size: 15px; color: var(--text-2); }
 
-/* The trackpad drawing: one finger sliding up the right edge, past the ticks it has felt. */
-.pad { width: 100%; max-width: 440px; justify-self: end; filter: var(--pad-shadow); }
-.pad .body { fill: var(--pad-surface); stroke: var(--line-strong); stroke-width: 1.5; }
-.pad .glyph { fill: var(--text-2); opacity: 0.6; }
-.pad .glyph .wave { fill: none; stroke: var(--text-2); stroke-width: 2; stroke-linecap: round; }
-.pad .edge { fill: var(--accent-soft); }
-.pad .ticks path { stroke: var(--line-strong); stroke-width: 2; stroke-linecap: round; fill: none; }
-.pad .ticks .on { stroke: var(--accent); }
-.pad .trail stop { stop-color: var(--accent); }
-.pad .halo { fill: var(--accent); opacity: 0.16; }
-.pad .dot { fill: var(--accent); }
-.pad .ring, .pad .pulse { fill: none; stroke: var(--accent); stroke-width: 2; opacity: 0; transform-box: fill-box; transform-origin: center; }
-.pad .finger { transform: translateY(-100px); }
-.pad .hand, .pad .hand3, .pad .trails3, .pad .tile, .pad .tile3, .pad .win-b, .pad .cap-b, .pad .cap-c { opacity: 0; }
-.pad .screen { fill: var(--bg); stroke: var(--line-strong); stroke-width: 1.5; }
-.pad .win-a { fill: var(--line-strong); }
-.pad .win-b { fill: var(--accent); }
-.pad .tab, .pad .ln { fill: var(--line-strong); }
-.pad .tab-new { fill: var(--accent); transform-box: fill-box; transform-origin: left center; }
-.pad .cap { font: 600 12px/1 var(--font); letter-spacing: 0.08em; text-transform: uppercase; fill: var(--text-2); }
+.hero .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.hero .price-line { margin: 22px 0 0; font-size: 16px; font-weight: 600; color: var(--text); }
+.hero .meta { margin: 6px 0 0; }
+.nav .soon { padding: 9px 16px; font-size: 15px; }
 
-/* The demo, one 14 s loop: an edge slide with a tick at each step, four fingers snapping a window
-   right, then three fingers swiping down to reopen a tab. It pauses under the pointer and stays
-   still for reduced motion. Percentages are of 14 s. */
-@media (prefers-reduced-motion: no-preference) {
-  .pad { --loop: 14s; }
-  .pad * { animation-duration: var(--loop); animation-iteration-count: infinite; animation-fill-mode: both; }
-  .pad .finger { animation-name: pad-finger; }
-  .pad .trail-bar { animation-name: pad-trail; }
-  .pad .t.on path { animation-name: pad-tick; animation-delay: calc(0.6s + var(--k) * 0.5s); }
-  .pad .t .ring { animation-name: pad-ring; animation-delay: calc(0.6s + var(--k) * 0.5s); }
-  .pad .hand { animation-name: pad-hand; }
-  .pad .pulse { animation-name: pad-pulse; }
-  .pad .tile { animation-name: pad-tile; }
-  .pad .win-a { animation-name: pad-win-a; }
-  .pad .win-b { animation-name: pad-win-b; }
-  .pad .hand3 { animation-name: pad-hand3; }
-  .pad .trails3 { animation-name: pad-trails3; }
-  .pad .tile3 { animation-name: pad-tile3; }
-  .pad .tab-new { animation-name: pad-tab-new; }
-  .pad .cap-a { animation-name: pad-cap-a; }
-  .pad .cap-b { animation-name: pad-cap-b; }
-  .pad .cap-c { animation-name: pad-cap-c; }
-  .pad:hover * { animation-play-state: paused; }
-}
-@keyframes pad-finger {
-  0% { transform: translateY(0); opacity: 0; }
-  2.86% { transform: translateY(0); opacity: 1; }
-  4.29% { transform: translateY(0); animation-timing-function: linear; }
-  25.71% { transform: translateY(-120px); opacity: 1; }
-  29.29% { transform: translateY(-120px); opacity: 1; }
-  32.14%, 100% { transform: translateY(-120px); opacity: 0; }
-}
-@keyframes pad-trail { 0%, 4.29% { opacity: 0; } 8.57%, 25.71% { opacity: 1; } 29.29%, 100% { opacity: 0; } }
-@keyframes pad-tick {
-  0% { stroke: var(--line-strong); }
-  0.71%, 6.43% { stroke: var(--accent); }
-  12.14%, 100% { stroke: var(--line-strong); }
-}
-@keyframes pad-ring {
-  0% { opacity: 0; transform: scale(0.7); }
-  0.71% { opacity: 0.6; transform: scale(0.7); }
-  5%, 100% { opacity: 0; transform: scale(1.7); }
-}
-@keyframes pad-hand {
-  0%, 34.29% { opacity: 0; transform: translateX(0); }
-  36.43% { opacity: 1; transform: translateX(0); }
-  41.43% { transform: translateX(0); animation-timing-function: ease-in-out; }
-  51.43% { transform: translateX(90px); }
-  55% { opacity: 1; transform: translateX(90px); }
-  57.86%, 100% { opacity: 0; transform: translateX(90px); }
-}
-@keyframes pad-pulse {
-  0%, 37.86% { opacity: 0; transform: scale(0.85); }
-  38.57% { opacity: 0.6; transform: scale(0.85); }
-  43.57%, 100% { opacity: 0; transform: scale(1.35); }
-}
-@keyframes pad-tile { 0%, 37.14% { opacity: 0; } 40%, 64.29% { opacity: 1; } 67.14%, 100% { opacity: 0; } }
-@keyframes pad-win-a { 0%, 52.14% { opacity: 1; } 54.29%, 100% { opacity: 0; } }
-@keyframes pad-win-b { 0%, 52.14% { opacity: 0; } 54.29%, 100% { opacity: 1; } }
-@keyframes pad-hand3 {
-  0%, 68.57% { opacity: 0; transform: translateY(0); }
-  70.71% { opacity: 1; transform: translateY(0); }
-  74.29% { transform: translateY(0); animation-timing-function: ease-in-out; }
-  78.57% { transform: translateY(56px); }
-  80% { opacity: 1; transform: translateY(56px); }
-  82.86%, 100% { opacity: 0; transform: translateY(56px); }
-}
-@keyframes pad-trails3 { 0%, 74.29% { opacity: 0; } 78.57%, 80% { opacity: 1; } 82.86%, 100% { opacity: 0; } }
-@keyframes pad-tile3 { 0%, 70% { opacity: 0; } 72.86%, 95.71% { opacity: 1; } 98.57%, 100% { opacity: 0; } }
-@keyframes pad-tab-new {
-  0%, 78.57% { opacity: 0; transform: scaleX(0.2); }
-  80.71%, 100% { opacity: 1; transform: scaleX(1); }
-}
-@keyframes pad-cap-a { 0% { opacity: 0; } 2.14%, 30.71% { opacity: 1; } 32.86%, 100% { opacity: 0; } }
-@keyframes pad-cap-b { 0%, 34.29% { opacity: 0; } 36.43%, 64.29% { opacity: 1; } 66.43%, 100% { opacity: 0; } }
-@keyframes pad-cap-c { 0%, 68.57% { opacity: 0; } 70.71%, 95.71% { opacity: 1; } 97.86%, 100% { opacity: 0; } }
+/* The window demo: an SVG with SMIL animation (tools/hero.py). Paused under the pointer, and on one still
+   frame for reduced motion (the script at the end of index.html). */
+.demo-wrap { justify-self: end; width: 100%; max-width: 520px; }
+.demo { width: 100%; height: auto; display: block; filter: var(--pad-shadow); }
+.demo .bezel { fill: var(--pad-surface); stroke: var(--line-strong); stroke-width: 1.5; }
+.demo .desk { fill: var(--stage); }
+.demo .menubar { fill: var(--line); }
+.demo .preview { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 1.5; stroke-dasharray: 6 5; opacity: 0; }
+.demo .win { fill: var(--bg); stroke: var(--line-strong); stroke-width: 1.2; }
+.demo .bar { fill: var(--bg-soft); }
+.demo .tl.r { fill: #ff5f57; } .demo .tl.y { fill: #febc2e; } .demo .tl.g { fill: #28c840; }
+.demo .ln { fill: var(--line-strong); }
+.demo .cursor { fill: var(--text); stroke: var(--bg); stroke-width: 1.2; stroke-linejoin: round; }
+.demo .handle { fill: var(--accent); stroke: var(--bg); stroke-width: 2; opacity: 0; }
+.demo .wheel { opacity: 0; }
+.demo .track { fill: none; stroke: var(--accent); stroke-width: 1.5; opacity: 0.35; }
+.demo .spot { fill: var(--bg); stroke: var(--accent); stroke-width: 1.5; }
+.demo .lit { fill: var(--accent); opacity: 0; }
+.demo .pad { fill: var(--pad-surface); stroke: var(--line-strong); stroke-width: 1.5; }
+.demo .finger { fill: var(--accent); opacity: 0; }
+.demo .ring { fill: none; stroke: var(--accent); stroke-width: 2; opacity: 0; }
+.demo .cap { font: 600 13px/1 var(--font); letter-spacing: 0.02em; fill: var(--text-2); opacity: 0; }
 
 @media (max-width: 860px) {
   .hero { grid-template-columns: 1fr; padding: 40px 0 64px; }
-  .pad { justify-self: start; max-width: 340px; }
+  .demo-wrap { justify-self: start; max-width: 460px; }
 }
 
 /* Features */
@@ -496,6 +426,70 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 .card .version { text-align: center; font-size: 14px; color: var(--text-2); margin: 10px 0 22px; font-variant-numeric: tabular-nums; }
 .reqs { list-style: none; padding: 0; margin: 0; font-size: 15px; }
 .reqs li { padding: 10px 0; border-top: 1px solid var(--line); color: var(--text-2); }
+
+/* Pricing */
+
+.pricing { padding: clamp(56px, 8vw, 96px) 0 0; }
+.pricing-grid { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: clamp(32px, 6vw, 72px); align-items: center; }
+@media (max-width: 860px) { .pricing-grid { grid-template-columns: 1fr; } }
+.pricing .intro { color: var(--text-2); font-size: 19px; max-width: 30em; }
+.includes { list-style: none; padding: 0; margin: 24px 0 0; }
+.includes li { position: relative; padding: 0 0 14px 30px; color: var(--text-2); }
+.includes li::before {
+  content: ""; position: absolute; left: 2px; top: 6px; width: 14px; height: 8px;
+  border: solid var(--accent); border-width: 0 0 2.5px 2.5px; transform: rotate(-45deg);
+}
+.price-card { position: static; text-align: center; box-shadow: var(--shot-shadow); }
+.price-card .launch { margin: 0 0 4px; font-size: 13px; font-weight: 650; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
+.price-card .price { margin: 0; line-height: 1; }
+.price-card .now { font-size: 64px; font-weight: 750; letter-spacing: -0.04em; }
+.price-card .was { font-size: 28px; color: var(--text-2); margin-left: 6px; }
+.price-card .price-note { margin: 8px 0 22px; color: var(--text-2); font-size: 15px; }
+.price-card .button { display: flex; width: 100%; justify-content: center; margin-top: 10px; }
+.price-card .soon { margin-bottom: 0; }
+.price-card .small { margin: 18px 0 0; font-size: 13px; color: var(--text-2); line-height: 1.45; }
+
+/* A drawing of System Settings, where Open Anyway appears (not a screenshot). */
+.settings-mock { margin: 8px 0 0; position: sticky; top: 24px; }
+.mock-window {
+  border: 1px solid var(--line-strong); border-radius: 12px; overflow: hidden; background: var(--bg);
+  box-shadow: var(--shot-shadow); font-size: 13px;
+}
+.mock-bar { display: flex; align-items: center; gap: 6px; padding: 10px 12px; background: var(--bg-soft); border-bottom: 1px solid var(--line); }
+.mock-bar i { width: 10px; height: 10px; border-radius: 50%; background: var(--line-strong); }
+.mock-bar span { margin-left: 10px; font-weight: 650; }
+.mock-body { padding: 14px; }
+.mock-head { margin: 0 0 8px; font-weight: 650; font-size: 12px; color: var(--text-2); }
+.mock-row {
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; margin-bottom: 8px; color: var(--text);
+}
+.mock-row.hl { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+.mock-row.dim { opacity: 0.5; }
+.mock-pop { color: var(--text-2); }
+.mock-btn { flex: none; padding: 4px 10px; border-radius: 6px; background: var(--button-2); font-weight: 600; }
+.mock-row.hl .mock-btn { background: var(--button-bg); color: var(--accent-ink); }
+.settings-mock figcaption { margin-top: 10px; font-size: 13px; color: var(--text-2); }
+
+.reqs-line { list-style: none; display: flex; flex-wrap: wrap; gap: 8px 22px; padding: 18px 0 0; margin: 8px 0 0; border-top: 1px solid var(--line); font-size: 15px; color: var(--text-2); }
+.reqs-line li::before { content: "✓ "; color: var(--accent); }
+
+/* FAQ */
+
+.faq { padding: clamp(56px, 8vw, 96px) 0 0; }
+.faq details { border-top: 1px solid var(--line); }
+.faq details:last-of-type { border-bottom: 1px solid var(--line); }
+.faq summary {
+  list-style: none; cursor: pointer; padding: 18px 36px 18px 0; position: relative;
+  font-weight: 600; font-size: 18px; letter-spacing: -0.01em;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after {
+  content: ""; position: absolute; right: 6px; top: 50%; width: 9px; height: 9px; margin-top: -7px;
+  border: solid var(--text-2); border-width: 0 2px 2px 0; transform: rotate(45deg); transition: transform 0.15s ease;
+}
+.faq details[open] summary::after { transform: rotate(-135deg); margin-top: -2px; }
+.faq details p { color: var(--text-2); margin: -4px 0 20px; max-width: 38em; }
 
 /* Recovery and help */
 
