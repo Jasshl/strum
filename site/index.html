@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Strum · Trackpad gestures for your Mac</title>
-  <meta name="description" content="Strum adds gestures to your Mac's trackpad. Rest four fingers on a window to snap, move or resize it. Free for 14 days.">
+  <meta name="description" content="Strum adds gestures to your Mac's trackpad, and you choose what each one does. Free for 14 days.">
   <meta property="og:title" content="Strum">
-  <meta property="og:description" content="Trackpad gestures for your Mac. Snap, move and resize windows with four fingers.">
+  <meta property="og:description" content="Trackpad gestures for your Mac. Any gesture, any action.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://jasshl.github.io/strum/">
   <meta property="og:image" content="https://jasshl.github.io/strum/img/icon-512.png">
@@ -39,8 +39,8 @@
   <section class="hero wrap">
     <div class="hero-text">
       <img class="icon" src="img/icon-256.webp" srcset="img/icon-256.webp 1x, img/icon-512.webp 2x" alt="" width="72" height="72">
-      <h1>Make your trackpad do what you want</h1>
-      <p class="lede">Strum is a small menu bar app that adds gestures to your Mac's trackpad, and you decide what each one does. Swipes, taps, pinches, force clicks and edge slides can press a shortcut, snap a window, skip a track or open an app, everywhere or in just one app.</p>
+      <h1>Any gesture, any action</h1>
+      <p class="lede">Strum is a small menu bar app that adds gestures to your Mac's trackpad. You choose what each one does, everywhere or in a single app.</p>
       <div class="actions">
         <!--pre--><span class="button soon" aria-disabled="true">Coming soon</span><!--/pre--><!--live:<a class="button" href="https://github.com/Jasshl/strum/releases/latest/download/Strum.dmg"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3v10M5.5 8.5 10 13l4.5-4.5M4 17h12"/></svg> Download free trial</a> <a class="button quiet" href="CHECKOUT_URL">Buy for $10</a>:live-->
       </div>
@@ -49,7 +49,7 @@
     </div>
 
     <div class="demo-wrap">
-      <svg class="demo" viewBox="0 0 560 456" role="img" aria-label="A Mac screen and a trackpad, showing four gestures that each do something different. One finger slides up the right edge and the volume goes up. One finger slides along the top edge and the next tab opens. Four fingers rest and slide left, and the window snaps to the left half. Then a three-finger tap, a gesture of your own, brings back a closed tab.">
+      <svg class="demo" data-still="13.4" viewBox="0 0 560 456" role="img" aria-label="A Mac screen and a trackpad, showing four gestures that each do something different. One finger slides up the right edge and the volume goes up. One finger slides along the top edge and the next tab opens. Four fingers rest and slide left, and the window snaps to the left half. Then a three-finger tap, a gesture of your own, brings back a closed tab.">
 <defs><clipPath id="demo-win-clip"><rect x="180" y="78" width="200" height="136" rx="7"><animate attributeName="x" dur="16s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.6406;0.6625;0.9912;0.9919;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="180;180;26;26;180;180"/><animate attributeName="y" dur="16s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.6406;0.6625;0.9912;0.9919;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="78;78;38;38;78;78"/><animate attributeName="width" dur="16s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.6406;0.6625;0.9912;0.9919;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="200;200;251;251;200;200"/><animate attributeName="height" dur="16s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.6406;0.6625;0.9912;0.9919;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="136;136;226;226;136;136"/></rect></clipPath></defs>
 <rect class="bezel" x="10" y="8" width="540" height="280" rx="16"/>
 <rect class="desk" x="20" y="18" width="520" height="252" rx="8"/>
@@ -105,7 +105,7 @@
 <section class="own-band" aria-labelledby="own-title">
   <div class="wrap">
     <div class="own">
-      <h2 id="own-title">Any gesture, any action</h2>
+      <h2 id="own-title">Your own gestures</h2>
       <p>Pick a gesture, do it on the trackpad to record it, then choose what happens: a keyboard shortcut, media keys, a window layout, opening an app or a link, an AppleScript and so on. A gesture can work everywhere or in a single app.</p>
     </div>
     <ul class="chart">
@@ -151,11 +151,38 @@
       <p class="note">Three or five fingers work too. Settings › Windows has a short walk-through to practise with.</p>
     </div>
     <figure class="shot">
-      <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="img/windows-dark-1x.webp 1x, img/windows-dark.webp 2x">
-        <img src="img/windows-1x.webp" srcset="img/windows-1x.webp 1x, img/windows.webp 2x" width="520" height="552" loading="lazy" style="--w: 460px"
-             alt="The Practise window gestures walk-through, step 2 of 5: eight window layouts arranged in a wheel around four resting fingers, with left two thirds highlighted.">
-      </picture>
+      <svg class="demo" data-still="1.9" viewBox="0 0 560 456" role="img" aria-label="A Mac screen and a trackpad. Four fingers rest on the trackpad and slide left, and the window snaps to the left half of the screen. Then two fingers stay down and slide, and the window grows from its corner. Then one finger drags the window and flicks it to the right half.">
+      <defs><clipPath id="win-demo-clip"><rect x="180" y="78" width="200" height="136" rx="7"><animate attributeName="x" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.1875;0.2167;0.3217;0.3225;0.4458;0.525;0.655;0.6558;0.775;0.8333;0.8542;0.8792;0.9883;0.9892;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="180;180;26;26;180;180;180;180;180;180;250;250;283;283;180;180"/><animate attributeName="y" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.1875;0.2167;0.3217;0.3225;0.4458;0.525;0.655;0.6558;0.775;0.8333;0.8542;0.8792;0.9883;0.9892;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="78;78;38;38;78;78;78;78;78;78;78;78;38;38;78;78"/><animate attributeName="width" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.1875;0.2167;0.3217;0.3225;0.4458;0.525;0.655;0.6558;0.775;0.8333;0.8542;0.8792;0.9883;0.9892;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="200;200;251;251;200;200;276;276;200;200;200;200;251;251;200;200"/><animate attributeName="height" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.1875;0.2167;0.3217;0.3225;0.4458;0.525;0.655;0.6558;0.775;0.8333;0.8542;0.8792;0.9883;0.9892;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="136;136;226;226;136;136;176;176;136;136;136;136;226;226;136;136"/></rect></clipPath></defs>
+      <rect class="bezel" x="10" y="8" width="540" height="280" rx="16"/>
+      <rect class="desk" x="20" y="18" width="520" height="252" rx="8"/>
+      <rect class="menubar" x="20" y="18" width="520" height="14" rx="0"/>
+      <rect class="preview" x="26" y="38" width="251" height="226" rx="7"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.1375;0.1542;0.1917;0.2167;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="0;0;0.9;0.9;0;0"/></rect>
+      <rect class="preview" x="283" y="38" width="251" height="226" rx="7"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.8375;0.85;0.8667;0.8917;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="0;0;0.9;0.9;0;0"/></rect>
+      <g class="window"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.3083;0.3217;0.3225;0.3375;0.6417;0.655;0.6558;0.6708;0.975;0.9883;0.9892;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="1;1;0;0;1;1;0;0;1;1;0;0;1"/>
+      <rect class="win" x="180" y="78" width="200" height="136" rx="7"><animate attributeName="x" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.1875;0.2167;0.3217;0.3225;0.4458;0.525;0.655;0.6558;0.775;0.8333;0.8542;0.8792;0.9883;0.9892;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="180;180;26;26;180;180;180;180;180;180;250;250;283;283;180;180"/><animate attributeName="y" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.1875;0.2167;0.3217;0.3225;0.4458;0.525;0.655;0.6558;0.775;0.8333;0.8542;0.8792;0.9883;0.9892;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="78;78;38;38;78;78;78;78;78;78;78;78;38;38;78;78"/><animate attributeName="width" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.1875;0.2167;0.3217;0.3225;0.4458;0.525;0.655;0.6558;0.775;0.8333;0.8542;0.8792;0.9883;0.9892;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="200;200;251;251;200;200;276;276;200;200;200;200;251;251;200;200"/><animate attributeName="height" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.1875;0.2167;0.3217;0.3225;0.4458;0.525;0.655;0.6558;0.775;0.8333;0.8542;0.8792;0.9883;0.9892;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="136;136;226;226;136;136;176;176;136;136;136;136;226;226;136;136"/></rect>
+      <g clip-path="url(#win-demo-clip)"><g><animateTransform attributeName="transform" type="translate" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.1875;0.2167;0.3217;0.3225;0.4458;0.525;0.655;0.6558;0.775;0.8333;0.8542;0.8792;0.9883;0.9892;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="180 78;180 78;26 38;26 38;180 78;180 78;180 78;180 78;180 78;180 78;250 78;250 78;283 38;283 38;180 78;180 78"/>
+      <rect class="bar" x="0" y="0" width="600" height="18"/>
+      <circle class="tl r" cx="11" cy="9" r="3.2"/><circle class="tl y" cx="21" cy="9" r="3.2"/><circle class="tl g" cx="31" cy="9" r="3.2"/>
+      <rect class="ln" x="14" y="32" width="120" height="5" rx="2.5"/>
+      <rect class="ln" x="14" y="46" width="150" height="5" rx="2.5"/>
+      <rect class="ln" x="14" y="60" width="96" height="5" rx="2.5"/>
+      <rect class="ln" x="14" y="74" width="136" height="5" rx="2.5"/>
+      <rect class="ln" x="14" y="88" width="70" height="5" rx="2.5"/>
+      <path class="cursor" d="M118 58v17l4.5-4.2 3 6.6 2.6-1.2-3-6.4 6.1-.3z"/>
+      </g></g>
+      <circle class="handle" cx="380" cy="214" r="7"><animate attributeName="cx" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.4458;0.525;0.655;0.6558;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="380;380;456;456;380;380"/><animate attributeName="cy" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.4458;0.525;0.655;0.6558;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="214;214;254;254;214;214"/><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.4292;0.4417;0.5292;0.5417;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="0;0;1;1;0;0"/></circle>
+      </g>
+      <g class="wheel"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.0792;0.0958;0.1833;0.2;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="0;0;1;1;0;0"/><circle class="track" cx="280" cy="146" r="46"/><circle class="spot" cx="326.0" cy="146.0" r="5"/><circle class="spot" cx="312.5" cy="113.5" r="5"/><circle class="spot" cx="280.0" cy="100.0" r="5"/><circle class="spot" cx="247.5" cy="113.5" r="5"/><circle class="spot" cx="234.0" cy="146.0" r="5"/><circle class="spot" cx="247.5" cy="178.5" r="5"/><circle class="spot" cx="280.0" cy="192.0" r="5"/><circle class="spot" cx="312.5" cy="178.5" r="5"/><circle class="lit" cx="234" cy="146" r="7"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.1292;0.1417;0.1833;0.2;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="0;0;1;1;0;0"/></circle></g>
+      <rect class="pad" x="180" y="302" width="200" height="120" rx="14"/>
+      <ellipse class="ring" cx="280" cy="366" rx="56" ry="30"><animate attributeName="rx" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.0667;0.1042;0.105;0.4;0.4375;0.4383;0.7333;0.7708;0.7717;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="56;56;76;56;56;76;56;56;76;56;56"/><animate attributeName="ry" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.0667;0.1042;0.105;0.4;0.4375;0.4383;0.7333;0.7708;0.7717;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="30;30;42;30;30;42;30;30;42;30;30"/><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.0658;0.0667;0.1042;0.3992;0.4;0.4375;0.7325;0.7333;0.7708;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="0;0;0.6;0;0;0.6;0;0;0.6;0;0"/></ellipse>
+      <g><animateTransform attributeName="transform" type="translate" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.1042;0.1667;0.1958;0.2;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="0 0;0 0;-36 0;-36 0;0 0;0 0"/><circle class="finger" cx="238" cy="374" r="9"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.0333;0.0583;0.1792;0.1958;0.3667;0.3917;0.4208;0.4375;0.7;0.725;0.7542;0.7708;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="0;0;1;1;0;0;1;1;0;0;1;1;0;0"/></circle></g>
+      <g><animateTransform attributeName="transform" type="translate" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.1042;0.1667;0.1958;0.2;0.4458;0.525;0.5417;0.55;0.775;0.8333;0.8542;0.86;0.875;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="0 0;0 0;-36 0;-36 0;0 0;0 0;34 20;34 20;0 0;0 0;24 0;44 0;44 0;0 0;0 0"/><circle class="finger" cx="264" cy="356" r="9"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.0333;0.0583;0.1792;0.1958;0.3667;0.3917;0.5292;0.5417;0.7;0.725;0.85;0.86;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="0;0;1;1;0;0;1;1;0;0;1;1;0;0"/></circle></g>
+      <g><animateTransform attributeName="transform" type="translate" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.1042;0.1667;0.1958;0.2;0.4458;0.525;0.5417;0.55;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="0 0;0 0;-36 0;-36 0;0 0;0 0;34 20;34 20;0 0;0 0"/><circle class="finger" cx="296" cy="356" r="9"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.0333;0.0583;0.1792;0.1958;0.3667;0.3917;0.5292;0.5417;0.7;0.725;0.7542;0.7708;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="0;0;1;1;0;0;1;1;0;0;1;1;0;0"/></circle></g>
+      <g><animateTransform attributeName="transform" type="translate" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.1042;0.1667;0.1958;0.2;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="0 0;0 0;-36 0;-36 0;0 0;0 0"/><circle class="finger" cx="322" cy="374" r="9"><animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.0333;0.0583;0.1792;0.1958;0.3667;0.3917;0.4208;0.4375;0.7;0.725;0.7542;0.7708;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="0;0;1;1;0;0;1;1;0;0;1;1;0;0"/></circle></g>
+      <text class="cap" x="280" y="448" text-anchor="middle">Rest four fingers, then slide to snap<animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0;0.025;0.3;0.3208;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="0;0;1;1;0;0"/></text>
+      <text class="cap" x="280" y="448" text-anchor="middle">Lift to two fingers to resize<animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.3333;0.3583;0.6333;0.6542;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="0;0;1;1;0;0"/></text>
+      <text class="cap" x="280" y="448" text-anchor="middle">Lift to one to move it, or flick it to a side<animate attributeName="opacity" dur="12s" repeatCount="indefinite" calcMode="spline" keyTimes="0;0.6667;0.6917;0.9667;0.9875;1" keySplines="0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1;0.45 0 0.25 1" values="0;0;1;1;0;0"/></text>
+      </svg>
     </figure>
   </article>
 
@@ -410,16 +437,18 @@
   })();
 </script>
 <script>
-  // The window demo: one still frame for reduced motion, and paused while the pointer is on it.
+  // The demos: one still frame each for reduced motion (data-still, in seconds), and paused while the pointer is on one.
   (function () {
-    var demo = document.querySelector('.demo');
-    if (!demo || !demo.pauseAnimations) return;
     var still = window.matchMedia('(prefers-reduced-motion: reduce)');
-    function apply() { if (still.matches) { demo.pauseAnimations(); demo.setCurrentTime(13.4); } else { demo.unpauseAnimations(); } }
-    apply();
-    still.addEventListener('change', apply);
-    demo.addEventListener('mouseenter', function () { demo.pauseAnimations(); });
-    demo.addEventListener('mouseleave', function () { if (!still.matches) demo.unpauseAnimations(); });
+    document.querySelectorAll('svg.demo').forEach(function (demo) {
+      if (!demo.pauseAnimations) return;
+      var at = parseFloat(demo.getAttribute('data-still')) || 0;
+      function apply() { if (still.matches) { demo.pauseAnimations(); demo.setCurrentTime(at); } else { demo.unpauseAnimations(); } }
+      apply();
+      still.addEventListener('change', apply);
+      demo.addEventListener('mouseenter', function () { demo.pauseAnimations(); });
+      demo.addEventListener('mouseleave', function () { if (!still.matches) demo.unpauseAnimations(); });
+    });
   })();
 </script>
 </body>
