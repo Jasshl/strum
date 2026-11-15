@@ -154,7 +154,6 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 
 /* The window demo: an SVG with SMIL animation (tools/hero.py). Paused under the pointer, and on one still
    frame for reduced motion (the script at the end of index.html). */
-.shot .demo { max-width: 500px; }
 .demo-wrap { justify-self: end; width: 100%; max-width: 520px; }
 .demo { width: 100%; height: auto; display: block; filter: var(--pad-shadow); }
 .demo .bezel { fill: var(--pad-surface); stroke: var(--line-strong); stroke-width: 1.5; }
