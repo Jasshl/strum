@@ -121,6 +121,8 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 .button.small { font-size: 15px; padding: 9px 16px; }
 .button.quiet { background: var(--button-2); color: var(--text); }
 .button.quiet:hover { background: var(--button-2-hover); color: var(--text); }
+.soon { display: inline-block; margin: 0; padding: 12px 22px; border-radius: 999px; background: var(--button-2); color: var(--text); font-weight: 600; }
+.card .soon { display: block; text-align: center; margin-bottom: 22px; }
 
 /* Hero */
 
