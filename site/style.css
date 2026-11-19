@@ -567,3 +567,6 @@ td:first-child { font-size: 19px; color: var(--text); width: 64px; }
 .site-footer nav { display: flex; gap: 22px; }
 .site-footer a { color: var(--text-2); text-decoration: none; }
 .site-footer a:hover { color: var(--text); }
+.site-footer .listed-on { justify-content: flex-start; gap: 12px; margin-top: 20px; }
+.site-footer .listed-on img { display: block; height: 34px; width: auto; opacity: 0.8; }
+.site-footer .listed-on a:hover img { opacity: 1; }

@@ -1,6 +1,6 @@
 # Strum
 
-Strum is a small menu bar app that adds gestures to your Mac's trackpad. Strum 1.0 is coming soon.
+Strum is a small menu bar app that adds gestures to your Mac's trackpad.
 
 [Website](https://jasshl.github.io/strum/) · [Help](https://jasshl.github.io/strum/help.html) · [Privacy](https://jasshl.github.io/strum/privacy.html)
 
