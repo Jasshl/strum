@@ -195,6 +195,9 @@ p { margin: 0 0 1em; text-wrap: pretty; }
   border-radius: 18px; border: 1px solid var(--line); background: #f7efed;
   box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.3);
 }
+@media (prefers-color-scheme: dark) {
+  .film-video { background: #1a1615; box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.8); }
+}
 
 /* Features */
 

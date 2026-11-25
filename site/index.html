@@ -16,7 +16,7 @@
   <meta name="theme-color" content="#2a201e" media="(prefers-color-scheme: dark)">
   <link rel="icon" type="image/png" href="img/favicon.png">
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-  <link rel="stylesheet" href="style.css?v=20261125a">
+  <link rel="stylesheet" href="style.css?v=20261125b">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -107,7 +107,11 @@
 </div>
 
 <section class="film wrap" aria-label="Video">
-  <video class="film-video" src="media/strum.mp4" poster="media/strum-poster.jpg" width="1280" height="720" muted loop playsinline controls preload="metadata" aria-label="A 39-second video of Strum. Rest four fingers and slide to place a window, lift to two fingers to resize or one to move, slide along an edge for volume and tabs, record your own gestures, ask an AI app to add one, and set how the ticks feel."></video>
+  <video class="film-video" poster="media/strum-poster.jpg" width="1280" height="720" muted loop playsinline controls preload="metadata" aria-label="A 39-second video of Strum. Rest four fingers and slide to place a window, lift to two fingers to resize or one to move, slide along an edge for volume and tabs, record your own gestures, ask an AI app to add one, and set how the ticks feel.">
+    <source src="media/strum-dark.mp4" type="video/mp4" media="(prefers-color-scheme: dark)">
+    <source src="media/strum.mp4" type="video/mp4">
+  </video>
+  <script>if (window.matchMedia('(prefers-color-scheme: dark)').matches) document.currentScript.previousElementSibling.poster = 'media/strum-dark-poster.jpg';</script>
 </section>
 
 <section class="features wrap" id="features" aria-label="Features">
@@ -441,13 +445,27 @@
 </script>
 <script>
   // The video plays muted while it's on screen, unless reduced motion is on. Its controls turn the sound on.
+  // There's a light and a dark version; when the theme changes, it switches and carries on from the same moment.
   (function () {
     var v = document.querySelector('.film-video');
     if (!v || !('IntersectionObserver' in window)) return;
     var still = window.matchMedia('(prefers-reduced-motion: reduce)');
+    var dark = window.matchMedia('(prefers-color-scheme: dark)');
     var userPaused = false, ours = false;
     v.addEventListener('pause', function () { if (!ours) userPaused = true; ours = false; });
     v.addEventListener('play', function () { userPaused = false; });
+    dark.addEventListener('change', function () {
+      var name = dark.matches ? 'strum-dark' : 'strum';
+      v.poster = 'media/' + name + '-poster.jpg';
+      if (!v.currentSrc || v.currentSrc.indexOf('/media/' + name + '.mp4') !== -1) return;
+      var t = v.currentTime, playing = !v.paused, keep = userPaused;
+      v.src = 'media/' + name + '.mp4';
+      v.addEventListener('loadedmetadata', function () {
+        userPaused = keep;
+        v.currentTime = t;
+        if (playing) v.play().catch(function () {});
+      }, { once: true });
+    });
     new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
         if (e.intersectionRatio >= 0.5) {
