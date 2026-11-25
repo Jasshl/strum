@@ -16,7 +16,7 @@
   <meta name="theme-color" content="#2a201e" media="(prefers-color-scheme: dark)">
   <link rel="icon" type="image/png" href="img/favicon.png">
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-  <link rel="stylesheet" href="style.css?v=20261115b">
+  <link rel="stylesheet" href="style.css?v=20261125a">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -105,6 +105,10 @@
     </div>
   </section>
 </div>
+
+<section class="film wrap" aria-label="Video">
+  <video class="film-video" src="media/strum.mp4" poster="media/strum-poster.jpg" width="1280" height="720" muted loop playsinline controls preload="metadata" aria-label="A 39-second video of Strum. Rest four fingers and slide to place a window, lift to two fingers to resize or one to move, slide along an edge for volume and tabs, record your own gestures, ask an AI app to add one, and set how the ticks feel."></video>
+</section>
 
 <section class="features wrap" id="features" aria-label="Features">
 
@@ -433,6 +437,24 @@
       demo.addEventListener('mouseenter', function () { demo.pauseAnimations(); });
       demo.addEventListener('mouseleave', function () { if (!still.matches) demo.unpauseAnimations(); });
     });
+  })();
+</script>
+<script>
+  // The video plays muted while it's on screen, unless reduced motion is on. Its controls turn the sound on.
+  (function () {
+    var v = document.querySelector('.film-video');
+    if (!v || !('IntersectionObserver' in window)) return;
+    var still = window.matchMedia('(prefers-reduced-motion: reduce)');
+    var userPaused = false, ours = false;
+    v.addEventListener('pause', function () { if (!ours) userPaused = true; ours = false; });
+    v.addEventListener('play', function () { userPaused = false; });
+    new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.intersectionRatio >= 0.5) {
+          if (v.paused && !userPaused && !still.matches) v.play().catch(function () {});
+        } else if (!v.paused) { ours = true; v.pause(); }
+      });
+    }, { threshold: [0, 0.5] }).observe(v);
   })();
 </script>
 </body>

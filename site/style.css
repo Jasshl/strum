@@ -187,6 +187,15 @@ p { margin: 0 0 1em; text-wrap: pretty; }
   .demo-wrap { justify-self: start; max-width: 460px; }
 }
 
+/* Video */
+
+.film { padding: 0 0 clamp(56px, 8vw, 96px); }
+.film-video {
+  display: block; width: 100%; height: auto; aspect-ratio: 16 / 9;
+  border-radius: 18px; border: 1px solid var(--line); background: #f7efed;
+  box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.3);
+}
+
 /* Features */
 
 .features { padding: 0 0 40px; }
